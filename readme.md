@@ -10,7 +10,7 @@
 
 首先给出课程框架
 
-![course](https://gitee.com/PB18061383/ustc_cyber_security/raw/master/markdown_assets/course.png)
+![course](https://gitee.com/PB18061383/ustc_cyber_security/raw/master/markdown_assets/course.jpg)
 
 
 
