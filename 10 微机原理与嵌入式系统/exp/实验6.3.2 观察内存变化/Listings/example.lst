@@ -1,0 +1,141 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000 00000010 
+                       Stack_Size
+                               EQU              0x0000010
+    2 00000000                 AREA             STACK, READWRITE
+    3 00000000         __stack_limit
+    4 00000000 00 00 00 
+              00 00 00 
+              00 00 00 
+              00 00 00 
+              00 00 00 
+              00       Stack_Mem
+                               SPACE            Stack_Size
+    5 00000010         __initial_sp
+    6 00000010         
+    7 00000010                 AREA             RESET,CODE,READONLY
+    8 00000000 00000000 
+                       Vectors DCD              __initial_sp
+    9 00000004         ENTRY
+   10 00000004 4802            LDR              R0,= Vectors
+   11 00000006 6801            LDR              R1,[R0]
+   12 00000008 F04F 0211       MOV              R2, #0x11
+   13 0000000C B404            PUSH             {R2}
+   14 0000000E         LOOP
+   15 0000000E E7FE            B                LOOP
+   16 00000010         END
+                       
+              00000000 
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp --apcs=int
+erwork --depend=.\objects\example.d -o.\objects\example.o -I"D:\Œ¢ª˙‘≠¿Ì”Î«∂»Î 
+ΩœµÕ≥\‘¥¬Î\ µ—È6.3.2 π€≤Ïƒ⁄¥Ê±‰ªØ\RTE" -IC:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP
+\1.0.8\Device\Include -IC:\Keil_v5\ARM\CMSIS\Include --predefine="__UVISION_VER
+SION SETA 514" --predefine="STM32F40_41xxx SETA 1" --list=.\listings\example.ls
+t example.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+STACK 00000000
+
+Symbol: STACK
+   Definitions
+      At line 2 in file example.s
+   Uses
+      None
+Comment: STACK unused
+Stack_Mem 00000000
+
+Symbol: Stack_Mem
+   Definitions
+      At line 4 in file example.s
+   Uses
+      None
+Comment: Stack_Mem unused
+__initial_sp 00000010
+
+Symbol: __initial_sp
+   Definitions
+      At line 5 in file example.s
+   Uses
+      At line 8 in file example.s
+Comment: __initial_sp used once
+__stack_limit 00000000
+
+Symbol: __stack_limit
+   Definitions
+      At line 3 in file example.s
+   Uses
+      None
+Comment: __stack_limit unused
+4 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+END 00000010
+
+Symbol: END
+   Definitions
+      At line 16 in file example.s
+   Uses
+      None
+Comment: END unused
+ENTRY 00000004
+
+Symbol: ENTRY
+   Definitions
+      At line 9 in file example.s
+   Uses
+      None
+Comment: ENTRY unused
+LOOP 0000000E
+
+Symbol: LOOP
+   Definitions
+      At line 14 in file example.s
+   Uses
+      At line 15 in file example.s
+Comment: LOOP used once
+RESET 00000000
+
+Symbol: RESET
+   Definitions
+      At line 7 in file example.s
+   Uses
+      None
+Comment: RESET unused
+Vectors 00000000
+
+Symbol: Vectors
+   Definitions
+      At line 8 in file example.s
+   Uses
+      At line 10 in file example.s
+Comment: Vectors used once
+5 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Absolute symbols
+
+Stack_Size 00000010
+
+Symbol: Stack_Size
+   Definitions
+      At line 1 in file example.s
+   Uses
+      At line 4 in file example.s
+Comment: Stack_Size used once
+1 symbol
+345 symbols in table

@@ -1,0 +1,107 @@
+1.1
+uboot@DA9:~$ /sbin/ifconfig eth0
+eth0      Link encap:以太网  硬件地址 6c:4b:90:48:e9:2c  
+          inet 地址:192.168.122.127  广播:192.168.122.255  掩码:255.255.255.0
+          inet6 地址: fe80::6e4b:90ff:fe48:e92c/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  跃点数:1
+          接收数据包:383023 错误:0 丢弃:280 过载:0 帧数:0
+          发送数据包:149991 错误:0 丢弃:0 过载:0 载波:0
+          碰撞:0 发送队列长度:1000 
+          接收字节:544082411 (544.0 MB)  发送字节:72953050 (72.9 MB)
+          中断:16 Memory:f7300000-f7320000 
+
+
+1.2
+uboot@DA9:~$ arp -n
+地址                     类型    硬件地址            标志  Mask            接口
+192.168.122.250          ether   08:94:ef:05:0b:d8   C                     eth0
+192.168.122.126          ether   6c:4b:90:48:e9:97   C                     eth0
+192.168.122.128          ether   6c:4b:90:48:ea:df   C                     eth0
+192.168.122.254          ether   78:58:60:7b:6c:68   C                     eth0
+
+1.3
+uboot@DA9:~$ ping 192.168.122.130
+PING 192.168.122.130 (192.168.122.130) 56(84) bytes of data.
+64 bytes from 192.168.122.130: icmp_seq=1 ttl=64 time=0.371 ms
+64 bytes from 192.168.122.130: icmp_seq=2 ttl=64 time=0.422 ms
+64 bytes from 192.168.122.130: icmp_seq=3 ttl=64 time=0.504 ms
+64 bytes from 192.168.122.130: icmp_seq=4 ttl=64 time=0.471 ms
+^C
+--- 192.168.122.130 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3072ms
+rtt min/avg/max/mdev = 0.371/0.442/0.504/0.050 ms
+
+
+1.4
+uboot@DA9:~$ arp -n
+地址                     类型    硬件地址            标志  Mask            接口
+192.168.122.250          ether   08:94:ef:05:0b:d8   C                     eth0
+192.168.122.126          ether   6c:4b:90:48:e9:97   C                     eth0
+192.168.122.128          ether   6c:4b:90:48:ea:df   C                     eth0
+192.168.122.130          ether   6c:4b:90:48:eb:a0   C                     eth0
+192.168.122.254          ether   78:58:60:7b:6c:68   C                     eth0
+
+1.6
+uboot@DA9:~$ route -n
+内核 IP 路由表
+目标            网关            子网掩码        标志  跃点   引用  使用 接口
+0.0.0.0         192.168.122.254 0.0.0.0         UG    0      0        0 eth0
+127.0.0.1       0.0.0.0         255.255.255.255 UH    0      0        0 lo
+192.168.122.0   0.0.0.0         255.255.255.0   U     0      0        0 eth0
+
+1.7
+uboot@DA9:~$ route -n
+内核 IP 路由表
+目标            网关            子网掩码        标志  跃点   引用  使用 接口
+0.0.0.0         192.168.122.254 0.0.0.0         UG    0      0        0 eth0
+127.0.0.1       0.0.0.0         255.255.255.255 UH    0      0        0 lo
+192.168.122.0   0.0.0.0         255.255.255.0   U     0      0        0 eth0
+
+1.8
+uboot@DA9:~$ cat /proc/sys/net/ipv4/ip_forward
+0
+
+1.9.1
+uboot@DA9:~$ sudo apt install traceroute
+sudo: 无法解析主机：DA9
+[sudo] uboot 的密码： 
+正在读取软件包列表... 完成
+正在分析软件包的依赖关系树       
+正在读取状态信息... 完成       
+下列【新】软件包将被安装：
+  traceroute
+升级了 0 个软件包，新安装了 1 个软件包，要卸载 0 个软件包，有 0 个软件包未被升级。
+需要下载 45.5 kB 的归档。
+解压缩后会消耗 177 kB 的额外空间。
+获取:1 http://mirrors.ustc.edu.cn/ubuntu xenial/universe amd64 traceroute amd64 1:2.0.21-1 [45.5 kB]
+已下载 45.5 kB，耗时 0秒 (0 B/s)      
+正在选中未选择的软件包 traceroute。
+(正在读取数据库 ... 系统当前共安装有 215186 个文件和目录。)
+正准备解包 .../traceroute_1%3a2.0.21-1_amd64.deb  ...
+正在解包 traceroute (1:2.0.21-1) ...
+正在处理用于 man-db (2.7.5-1) 的触发器 ...
+正在设置 traceroute (1:2.0.21-1) ...
+update-alternatives: 使用 /usr/bin/traceroute.db 来在自动模式中提供 /usr/bin/traceroute (traceroute)
+update-alternatives: 使用 /usr/bin/lft.db 来在自动模式中提供 /usr/bin/lft (lft)
+update-alternatives: 使用 /usr/bin/traceproto.db 来在自动模式中提供 /usr/bin/traceproto (traceproto)
+update-alternatives: 使用 /usr/sbin/tcptraceroute.db 来在自动模式中提供 /usr/sbin/tcptraceroute (tcptraceroute)
+
+1.9.2
+uboot@DA9:~$ traceroute bbs.ustc.edu.cn
+traceroute to bbs.ustc.edu.cn (202.38.64.3), 30 hops max, 60 byte packets
+ 1  192.168.122.254 (192.168.122.254)  2.078 ms  2.384 ms  2.635 ms
+ 2  172.16.0.1 (172.16.0.1)  1.328 ms  1.368 ms  1.421 ms
+ 3  202.38.88.94 (202.38.88.94)  0.960 ms  0.966 ms  0.959 ms
+ 4  202.38.96.188 (202.38.96.188)  1.966 ms 202.38.96.60 (202.38.96.60)  2.020 ms *
+ 5  * * *
+ 6  * * *
+ 7  * * *
+ 8  * * *
+ 9  * * *
+10  * * *
+11  * * *
+12  * * *
+13  * * *
+14  * * *
+15  *^C
+

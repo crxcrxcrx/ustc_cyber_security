@@ -1,0 +1,614 @@
+1.1:
+uboot@DAC:~$ wget -c http://mirrors.ustc.edu.cn/debian/tools/loadlin.exe
+--2020-11-07 08:42:23--  http://mirrors.ustc.edu.cn/debian/tools/loadlin.exe
+正在解析主机 mirrors.ustc.edu.cn (mirrors.ustc.edu.cn)... 202.38.95.110, 2001:da8:d800:95::110
+正在连接 mirrors.ustc.edu.cn (mirrors.ustc.edu.cn)|202.38.95.110|:80... 已连接。
+已发出 HTTP 请求，正在等待回应... 200 OK
+长度： 42370 (41K) [application/octet-stream]
+正在保存至: “loadlin.exe”
+
+loadlin.exe         100%[===================>]  41.38K  --.-KB/s    in 0s      
+
+2020-11-07 08:42:23 (106 MB/s) - 已保存 “loadlin.exe” [42370/42370])
+
+
+1.2:
+uboot@DAA:~$ wget -b mirrors.ustc.edu.cn/debian/tools/loadlin.exe
+继续在后台运行，pid 为 3654。
+将把输出写入至 “wget-log”。
+
+1.3:
+uboot@DAA:~$ touch list\
+> gedit list
+
+uboot@DAA:~$ wget -i list
+--2020-11-07 08:53:59--  http://mirrors.ustc.edu.cn/debian/tools/loadlin.exe
+正在解析主机 mirrors.ustc.edu.cn (mirrors.ustc.edu.cn)... 202.38.95.110, 2001:da8:d800:95::110
+正在连接 mirrors.ustc.edu.cn (mirrors.ustc.edu.cn)|202.38.95.110|:80... 已连接。
+已发出 HTTP 请求，正在等待回应... 200 OK
+长度： 42370 (41K) [application/octet-stream]
+正在保存至: “loadlin.exe.2”
+
+loadlin.exe.2       100%[===================>]  41.38K  --.-KB/s    in 0.001s  
+
+2020-11-07 08:53:59 (60.2 MB/s) - 已保存 “loadlin.exe.2” [42370/42370])
+
+--2020-11-07 08:53:59--  http://mirrors.ustc.edu.cn/debian/tools/loadlin.txt
+再次使用存在的到 mirrors.ustc.edu.cn:80 的连接。
+已发出 HTTP 请求，正在等待回应... 200 OK
+长度： 32663 (32K) [text/plain]
+正在保存至: “loadlin.txt.3”
+
+loadlin.txt.3       100%[===================>]  31.90K  --.-KB/s    in 0s      
+
+2020-11-07 08:53:59 (125 MB/s) - 已保存 “loadlin.txt.3” [32663/32663])
+
+下载完毕 --2020-11-07 08:53:59--
+总用时：0.006s
+下载了：2 个文件，0.001s (77.7 MB/s) 中的 73K
+
+1.4.1:
+uboot@DAA:~$ wget -x -r -A "*.txt" -np -l1 -e robots=off http://mirrors.ustc.edu.cn/debian/tools
+--2020-11-07 08:56:06--  http://mirrors.ustc.edu.cn/debian/tools
+正在解析主机 mirrors.ustc.edu.cn (mirrors.ustc.edu.cn)... 202.38.95.110, 2001:da8:d800:95::110
+正在连接 mirrors.ustc.edu.cn (mirrors.ustc.edu.cn)|202.38.95.110|:80... 已连接。
+已发出 HTTP 请求，正在等待回应... 301 Moved Permanently
+位置：http://mirrors.ustc.edu.cn/debian/tools/ [跟随至新的 URL]
+--2020-11-07 08:56:06--  http://mirrors.ustc.edu.cn/debian/tools/
+再次使用存在的到 mirrors.ustc.edu.cn:80 的连接。
+已发出 HTTP 请求，正在等待回应... 200 OK
+长度： 未指定 [text/html]
+正在保存至: “mirrors.ustc.edu.cn/debian/tools.tmp”
+
+mirrors.ustc.edu.cn     [ <=>                ]     511  --.-KB/s    in 0s      
+
+2020-11-07 08:56:06 (29.3 MB/s) - “mirrors.ustc.edu.cn/debian/tools.tmp” 已保存 [511]
+
+正在删除 mirrors.ustc.edu.cn/debian/tools.tmp 因为它应该被指定了拒绝下载。
+
+--2020-11-07 08:56:06--  http://mirrors.ustc.edu.cn/debian/
+再次使用存在的到 mirrors.ustc.edu.cn:80 的连接。
+已发出 HTTP 请求，正在等待回应... 200 OK
+长度： 未指定 [text/html]
+正在保存至: “mirrors.ustc.edu.cn/debian/index.html.tmp”
+
+mirrors.ustc.edu.cn     [ <=>                ]   1.72K  --.-KB/s    in 0s      
+
+2020-11-07 08:56:06 (120 MB/s) - “mirrors.ustc.edu.cn/debian/index.html.tmp” 已保存 [1759]
+
+正在删除 mirrors.ustc.edu.cn/debian/index.html.tmp 因为它应该被指定了拒绝下载。
+
+--2020-11-07 08:56:06--  http://mirrors.ustc.edu.cn/debian/tools/win32-loader/
+再次使用存在的到 mirrors.ustc.edu.cn:80 的连接。
+已发出 HTTP 请求，正在等待回应... 200 OK
+长度： 未指定 [text/html]
+正在保存至: “mirrors.ustc.edu.cn/debian/tools/win32-loader/index.html.tmp”
+
+mirrors.ustc.edu.cn     [ <=>                ]     759  --.-KB/s    in 0s      
+
+2020-11-07 08:56:06 (50.3 MB/s) - “mirrors.ustc.edu.cn/debian/tools/win32-loader/index.html.tmp” 已保存 [759]
+
+正在删除 mirrors.ustc.edu.cn/debian/tools/win32-loader/index.html.tmp 因为它应该被指定了拒绝下载。
+
+--2020-11-07 08:56:06--  http://mirrors.ustc.edu.cn/debian/tools/loadlin.txt
+再次使用存在的到 mirrors.ustc.edu.cn:80 的连接。
+已发出 HTTP 请求，正在等待回应... 200 OK
+长度： 32663 (32K) [text/plain]
+正在保存至: “mirrors.ustc.edu.cn/debian/tools/loadlin.txt”
+
+mirrors.ustc.edu.cn 100%[===================>]  31.90K  --.-KB/s    in 0s      
+
+2020-11-07 08:56:06 (78.4 MB/s) - 已保存 “mirrors.ustc.edu.cn/debian/tools/loadlin.txt” [32663/32663])
+
+下载完毕 --2020-11-07 08:56:06--
+总用时：0.01s
+下载了：4 个文件，0s (76.9 MB/s) 中的 35K
+
+1.4.2:
+uboot@DAA:~$ wget -nd -r -A "*.txt" -np -l1 -e robots=off http://mirrors.ustc.edu.cn/debian/tools
+--2020-11-07 08:57:27--  http://mirrors.ustc.edu.cn/debian/tools
+正在解析主机 mirrors.ustc.edu.cn (mirrors.ustc.edu.cn)... 202.38.95.110, 2001:da8:d800:95::110
+正在连接 mirrors.ustc.edu.cn (mirrors.ustc.edu.cn)|202.38.95.110|:80... 已连接。
+已发出 HTTP 请求，正在等待回应... 301 Moved Permanently
+位置：http://mirrors.ustc.edu.cn/debian/tools/ [跟随至新的 URL]
+--2020-11-07 08:57:27--  http://mirrors.ustc.edu.cn/debian/tools/
+再次使用存在的到 mirrors.ustc.edu.cn:80 的连接。
+已发出 HTTP 请求，正在等待回应... 200 OK
+长度： 未指定 [text/html]
+正在保存至: “tools.tmp”
+
+tools.tmp               [ <=>                ]     511  --.-KB/s    in 0s      
+
+2020-11-07 08:57:27 (34.7 MB/s) - “tools.tmp” 已保存 [511]
+
+正在删除 tools.tmp 因为它应该被指定了拒绝下载。
+
+--2020-11-07 08:57:27--  http://mirrors.ustc.edu.cn/debian/
+再次使用存在的到 mirrors.ustc.edu.cn:80 的连接。
+已发出 HTTP 请求，正在等待回应... 200 OK
+长度： 未指定 [text/html]
+正在保存至: “index.html.tmp”
+
+index.html.tmp          [ <=>                ]   1.72K  --.-KB/s    in 0s      
+
+2020-11-07 08:57:27 (134 MB/s) - “index.html.tmp” 已保存 [1759]
+
+正在删除 index.html.tmp 因为它应该被指定了拒绝下载。
+
+--2020-11-07 08:57:27--  http://mirrors.ustc.edu.cn/debian/tools/win32-loader/
+再次使用存在的到 mirrors.ustc.edu.cn:80 的连接。
+已发出 HTTP 请求，正在等待回应... 200 OK
+长度： 未指定 [text/html]
+正在保存至: “index.html.tmp”
+
+index.html.tmp          [ <=>                ]     759  --.-KB/s    in 0s      
+
+2020-11-07 08:57:27 (53.5 MB/s) - “index.html.tmp” 已保存 [759]
+
+正在删除 index.html.tmp 因为它应该被指定了拒绝下载。
+
+--2020-11-07 08:57:27--  http://mirrors.ustc.edu.cn/debian/tools/loadlin.txt
+再次使用存在的到 mirrors.ustc.edu.cn:80 的连接。
+已发出 HTTP 请求，正在等待回应... 200 OK
+长度： 32663 (32K) [text/plain]
+正在保存至: “loadlin.txt.4.tmp”
+
+loadlin.txt.4.tmp   100%[===================>]  31.90K  --.-KB/s    in 0s      
+
+2020-11-07 08:57:27 (183 MB/s) - 已保存 “loadlin.txt.4.tmp” [32663/32663])
+
+正在删除 loadlin.txt.4.tmp 因为它应该被指定了拒绝下载。
+
+下载完毕 --2020-11-07 08:57:27--
+总用时：0.008s
+下载了：4 个文件，0s (162 MB/s) 中的 35K
+
+1.5.1:
+uboot@DAA:~$ wget -x -r -R "*.txt" -np -l1 -e robots=off http://mirrors.ustc.edu.cn/debian/tools
+--2020-11-07 08:58:38--  http://mirrors.ustc.edu.cn/debian/tools
+正在解析主机 mirrors.ustc.edu.cn (mirrors.ustc.edu.cn)... 202.38.95.110, 2001:da8:d800:95::110
+正在连接 mirrors.ustc.edu.cn (mirrors.ustc.edu.cn)|202.38.95.110|:80... 已连接。
+已发出 HTTP 请求，正在等待回应... 301 Moved Permanently
+位置：http://mirrors.ustc.edu.cn/debian/tools/ [跟随至新的 URL]
+--2020-11-07 08:58:38--  http://mirrors.ustc.edu.cn/debian/tools/
+再次使用存在的到 mirrors.ustc.edu.cn:80 的连接。
+已发出 HTTP 请求，正在等待回应... 200 OK
+长度： 未指定 [text/html]
+正在保存至: “mirrors.ustc.edu.cn/debian/tools.1”
+
+mirrors.ustc.edu.cn     [ <=>                ]     511  --.-KB/s    in 0s      
+
+2020-11-07 08:58:38 (35.9 MB/s) - “mirrors.ustc.edu.cn/debian/tools.1” 已保存 [511]
+
+--2020-11-07 08:58:38--  http://mirrors.ustc.edu.cn/debian/
+再次使用存在的到 mirrors.ustc.edu.cn:80 的连接。
+已发出 HTTP 请求，正在等待回应... 200 OK
+长度： 未指定 [text/html]
+正在保存至: “mirrors.ustc.edu.cn/debian/index.html”
+
+mirrors.ustc.edu.cn     [ <=>                ]   1.72K  --.-KB/s    in 0s      
+
+2020-11-07 08:58:38 (119 MB/s) - “mirrors.ustc.edu.cn/debian/index.html” 已保存 [1759]
+
+--2020-11-07 08:58:38--  http://mirrors.ustc.edu.cn/debian/tools/win32-loader/
+再次使用存在的到 mirrors.ustc.edu.cn:80 的连接。
+已发出 HTTP 请求，正在等待回应... 200 OK
+长度： 未指定 [text/html]
+正在保存至: “mirrors.ustc.edu.cn/debian/tools/win32-loader/index.html”
+
+mirrors.ustc.edu.cn     [ <=>                ]     759  --.-KB/s    in 0s      
+
+2020-11-07 08:58:38 (54.7 MB/s) - “mirrors.ustc.edu.cn/debian/tools/win32-loader/index.html” 已保存 [759]
+
+--2020-11-07 08:58:38--  http://mirrors.ustc.edu.cn/debian/tools/loadlin.exe
+再次使用存在的到 mirrors.ustc.edu.cn:80 的连接。
+已发出 HTTP 请求，正在等待回应... 200 OK
+长度： 42370 (41K) [application/octet-stream]
+正在保存至: “mirrors.ustc.edu.cn/debian/tools/loadlin.exe”
+
+mirrors.ustc.edu.cn 100%[===================>]  41.38K  --.-KB/s    in 0.001s  
+
+2020-11-07 08:58:38 (68.9 MB/s) - 已保存 “mirrors.ustc.edu.cn/debian/tools/loadlin.exe” [42370/42370])
+
+下载完毕 --2020-11-07 08:58:38--
+总用时：0.009s
+下载了：4 个文件，0.001s (69.0 MB/s) 中的 44K
+
+1.5.2:
+uboot@DAA:~$ wget -nd -r -R "*.txt" -np -l1 -e robots=off http://mirrors.ustc.edu.cn/debian/tools
+--2020-11-07 08:59:19--  http://mirrors.ustc.edu.cn/debian/tools
+正在解析主机 mirrors.ustc.edu.cn (mirrors.ustc.edu.cn)... 202.38.95.110, 2001:da8:d800:95::110
+正在连接 mirrors.ustc.edu.cn (mirrors.ustc.edu.cn)|202.38.95.110|:80... 已连接。
+已发出 HTTP 请求，正在等待回应... 301 Moved Permanently
+位置：http://mirrors.ustc.edu.cn/debian/tools/ [跟随至新的 URL]
+--2020-11-07 08:59:19--  http://mirrors.ustc.edu.cn/debian/tools/
+再次使用存在的到 mirrors.ustc.edu.cn:80 的连接。
+已发出 HTTP 请求，正在等待回应... 200 OK
+长度： 未指定 [text/html]
+正在保存至: “tools”
+
+tools                   [ <=>                ]     511  --.-KB/s    in 0s      
+
+2020-11-07 08:59:19 (31.9 MB/s) - “tools” 已保存 [511]
+
+--2020-11-07 08:59:19--  http://mirrors.ustc.edu.cn/debian/
+再次使用存在的到 mirrors.ustc.edu.cn:80 的连接。
+已发出 HTTP 请求，正在等待回应... 200 OK
+长度： 未指定 [text/html]
+正在保存至: “index.html”
+
+index.html              [ <=>                ]   1.72K  --.-KB/s    in 0s      
+
+2020-11-07 08:59:19 (116 MB/s) - “index.html” 已保存 [1759]
+
+--2020-11-07 08:59:19--  http://mirrors.ustc.edu.cn/debian/tools/win32-loader/
+再次使用存在的到 mirrors.ustc.edu.cn:80 的连接。
+已发出 HTTP 请求，正在等待回应... 200 OK
+长度： 未指定 [text/html]
+正在保存至: “index.html.1”
+
+index.html.1            [ <=>                ]     759  --.-KB/s    in 0s      
+
+2020-11-07 08:59:19 (50.8 MB/s) - “index.html.1” 已保存 [759]
+
+--2020-11-07 08:59:19--  http://mirrors.ustc.edu.cn/debian/tools/loadlin.exe
+再次使用存在的到 mirrors.ustc.edu.cn:80 的连接。
+已发出 HTTP 请求，正在等待回应... 200 OK
+长度： 42370 (41K) [application/octet-stream]
+正在保存至: “loadlin.exe.3”
+
+loadlin.exe.3       100%[===================>]  41.38K  --.-KB/s    in 0.001s  
+
+2020-11-07 08:59:19 (77.2 MB/s) - 已保存 “loadlin.exe.3” [42370/42370])
+
+下载完毕 --2020-11-07 08:59:19--
+总用时：0.008s
+下载了：4 个文件，0.001s (76.3 MB/s) 中的 44K
+
+1.6:
+uboot@DAA:~$ wget -m -np -l1 -e robots=off http://mirrors.ustc.edu.cn/debian/tools
+--2020-11-07 08:59:40--  http://mirrors.ustc.edu.cn/debian/tools
+正在解析主机 mirrors.ustc.edu.cn (mirrors.ustc.edu.cn)... 202.38.95.110, 2001:da8:d800:95::110
+正在连接 mirrors.ustc.edu.cn (mirrors.ustc.edu.cn)|202.38.95.110|:80... 已连接。
+已发出 HTTP 请求，正在等待回应... 301 Moved Permanently
+位置：http://mirrors.ustc.edu.cn/debian/tools/ [跟随至新的 URL]
+--2020-11-07 08:59:40--  http://mirrors.ustc.edu.cn/debian/tools/
+再次使用存在的到 mirrors.ustc.edu.cn:80 的连接。
+已发出 HTTP 请求，正在等待回应... 200 OK
+长度： 未指定 [text/html]
+正在保存至: “mirrors.ustc.edu.cn/debian/tools.2”
+
+mirrors.ustc.edu.cn     [ <=>                ]     511  --.-KB/s    in 0s      
+
+缺少“Last-modified”文件头 -- 关闭时间戳标记。
+2020-11-07 08:59:40 (33.2 MB/s) - “mirrors.ustc.edu.cn/debian/tools.2” 已保存 [511]
+
+--2020-11-07 08:59:40--  http://mirrors.ustc.edu.cn/debian/
+再次使用存在的到 mirrors.ustc.edu.cn:80 的连接。
+已发出 HTTP 请求，正在等待回应... 200 OK
+长度： 未指定 [text/html]
+正在保存至: “mirrors.ustc.edu.cn/debian/index.html”
+
+mirrors.ustc.edu.cn     [ <=>                ]   1.72K  --.-KB/s    in 0s      
+
+缺少“Last-modified”文件头 -- 关闭时间戳标记。
+2020-11-07 08:59:40 (114 MB/s) - “mirrors.ustc.edu.cn/debian/index.html” 已保存 [1759]
+
+--2020-11-07 08:59:40--  http://mirrors.ustc.edu.cn/debian/tools/win32-loader/
+再次使用存在的到 mirrors.ustc.edu.cn:80 的连接。
+已发出 HTTP 请求，正在等待回应... 200 OK
+长度： 未指定 [text/html]
+正在保存至: “mirrors.ustc.edu.cn/debian/tools/win32-loader/index.html”
+
+mirrors.ustc.edu.cn     [ <=>                ]     759  --.-KB/s    in 0s      
+
+缺少“Last-modified”文件头 -- 关闭时间戳标记。
+2020-11-07 08:59:40 (54.0 MB/s) - “mirrors.ustc.edu.cn/debian/tools/win32-loader/index.html” 已保存 [759]
+
+--2020-11-07 08:59:40--  http://mirrors.ustc.edu.cn/debian/tools/loadlin.exe
+再次使用存在的到 mirrors.ustc.edu.cn:80 的连接。
+已发出 HTTP 请求，正在等待回应... 304 Not Modified
+文件 “mirrors.ustc.edu.cn/debian/tools/loadlin.exe” 在服务器上未被更改。忽略此下载。
+
+--2020-11-07 08:59:40--  http://mirrors.ustc.edu.cn/debian/tools/loadlin.txt
+再次使用存在的到 mirrors.ustc.edu.cn:80 的连接。
+已发出 HTTP 请求，正在等待回应... 304 Not Modified
+文件 “mirrors.ustc.edu.cn/debian/tools/loadlin.txt” 在服务器上未被更改。忽略此下载。
+
+下载完毕 --2020-11-07 08:59:40--
+总用时：0.009s
+下载了：3 个文件，0s (67.5 MB/s) 中的 3.0K
+
+2.1.1.1(1):
+trojan@trojan-VirtualBox:~/桌面$ ftp home.ustc.edu.cn
+Connected to home.ustc.edu.cn.
+220-=================================================================
+220-
+220-         Welcome to USTC Student FTP/WWW Server
+220-          ��ӭ�����й��ƴ�ѧ��FTP/��ҳ������
+220-
+220-ע��: 
+220-1.  MailboxĿ¼������ǰ���ʼ�, �������Ҫ��ɾ��.
+220-
+220-2.  �ϴ�������ҳ�봴��Ŀ¼ public_html, ��ҳ�ĵ�һ���ļ���index.html
+220-
+220-3.  �û����ʺź�����ȡ���ʼ�������, ����޸����������ʼ��������Ͻ���.
+220-    �޸�������Լ1��Сʱ, ��ϵͳ�����ͬ��.
+220-
+220- 
+220 
+Name (home.ustc.edu.cn:trojan): yssickjgd
+331 Please specify the password.
+Password:
+230 Login successful.
+Remote system type is UNIX.
+Using binary mode to transfer files.
+
+2.1.2.1(1):
+trojan@trojan-VirtualBox:~/桌面$ ip addr
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: enp0s3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 08:00:27:80:01:e0 brd ff:ff:ff:ff:ff:ff
+    inet 10.0.2.15/24 brd 10.0.2.255 scope global dynamic noprefixroute enp0s3
+       valid_lft 84420sec preferred_lft 84420sec
+    inet6 fe80::1e43:928a:9d8c:21af/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+
+2.1.2.2(2):
+trojan@trojan-VirtualBox:~/桌面$ sudo tcpdump -vvnn -X host home.ustc.edu.cn and 10.0.2.15
+[sudo] trojan 的密码： 
+tcpdump: listening on enp0s3, link-type EN10MB (Ethernet), capture size 262144 bytes
+
+2.1.3.1(1):
+ftp> ls
+
+2.1.3.2(2):
+02:07:27.618109 IP (tos 0x10, ttl 64, id 13015, offset 0, flags [DF], proto TCP (6), length 64)
+    10.0.2.15.48138 > 202.38.64.10.21: Flags [P.], cksum 0x1672 (incorrect -> 0x476b), seq 1767407200:1767407224, ack 594624560, win 63784, length 24: FTP, length: 24
+	PORT 10,0,2,15,232,129
+	0x0000:  4510 0040 32d7 4000 4006 f191 0a00 020f  E..@2.@.@.......
+	0x0010:  ca26 400a bc0a 0015 6958 7e60 2371 4030  .&@.....iX~`#q@0
+	0x0020:  5018 f928 1672 0000 504f 5254 2031 302c  P..(.r..PORT.10,
+	0x0030:  302c 322c 3135 2c32 3332 2c31 3239 0d0a  0,2,15,232,129..
+02:07:27.618486 IP (tos 0x0, ttl 64, id 27731, offset 0, flags [none], proto TCP (6), length 40)
+    202.38.64.10.21 > 10.0.2.15.48138: Flags [.], cksum 0x9203 (correct), seq 1, ack 24, win 65535, length 0
+	0x0000:  4500 0028 6c53 0000 4006 f83d ca26 400a  E..(lS..@..=.&@.
+	0x0010:  0a00 020f 0015 bc0a 2371 4030 6958 7e78  ........#q@0iX~x
+	0x0020:  5010 ffff 9203 0000 0000 0000 0000       P.............
+02:07:27.622334 IP (tos 0x0, ttl 64, id 27732, offset 0, flags [none], proto TCP (6), length 67)
+    202.38.64.10.21 > 10.0.2.15.48138: Flags [P.], cksum 0x5cf5 (correct), seq 1:28, ack 24, win 65535, length 27: FTP, length: 27
+	500 Illegal PORT command.
+	0x0000:  4500 0043 6c54 0000 4006 f821 ca26 400a  E..ClT..@..!.&@.
+	0x0010:  0a00 020f 0015 bc0a 2371 4030 6958 7e78  ........#q@0iX~x
+	0x0020:  5018 ffff 5cf5 0000 3530 3020 496c 6c65  P...\...500.Ille
+	0x0030:  6761 6c20 504f 5254 2063 6f6d 6d61 6e64  gal.PORT.command
+	0x0040:  2e0d 0a                                  ...
+02:07:27.622342 IP (tos 0x10, ttl 64, id 13016, offset 0, flags [DF], proto TCP (6), length 40)
+    10.0.2.15.48138 > 202.38.64.10.21: Flags [.], cksum 0x165a (incorrect -> 0x98bf), seq 24, ack 28, win 63784, length 0
+	0x0000:  4510 0028 32d8 4000 4006 f1a8 0a00 020f  E..(2.@.@.......
+	0x0010:  ca26 400a bc0a 0015 6958 7e78 2371 404b  .&@.....iX~x#q@K
+	0x0020:  5010 f928 165a 0000                      P..(.Z..
+
+2.2.1.1(1):
+uboot@DAA:~$ ftp home.ustc.edu.cn
+Connected to home.ustc.edu.cn.
+220-=================================================================
+220-
+220-         Welcome to USTC Student FTP/WWW Server
+220-          ��ӭ�����й��ƴ�ѧ��FTP/��ҳ������
+220-
+220-ע��: 
+220-1.  MailboxĿ¼������ǰ���ʼ�, ��������Ҫ��ɾ��.
+220-
+220-2.  �ϴ�������ҳ�봴��Ŀ¼ public_html, ��ҳ�ĵ�һ���ļ���index.html
+220-
+220-3.  �û����ʺź�����ȡ���ʼ�������, �����޸����������ʼ��������Ͻ���.
+220-    �޸���������Լ1��Сʱ, ��ϵͳ������ͬ��.
+220-
+220- 
+220 
+Name (home.ustc.edu.cn:uboot): yssickjgd
+331 Please specify the password.
+Password:
+230 Login successful.
+Remote system type is UNIX.
+Using binary mode to transfer files.
+
+2.2.1.2(1):
+ftp> passive
+Passive mode on.
+
+2.2.2.1(2):
+uboot@DAA:~$ ip addr
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: dummy0: <BROADCAST,NOARP> mtu 1500 qdisc noop state DOWN group default qlen 1000
+    link/ether ee:c9:66:a2:6f:1c brd ff:ff:ff:ff:ff:ff
+3: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 6c:4b:90:48:ea:df brd ff:ff:ff:ff:ff:ff
+    inet 192.168.122.128/24 brd 192.168.122.255 scope global eth0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::6e4b:90ff:fe48:eadf/64 scope link 
+       valid_lft forever preferred_lft forever
+
+2.2.2.2(2):
+uboot@DAA:~$ sudo tcpdump -vvnn -X host home.ustc.edu.cn and 192.168.122.128
+sudo: 无法解析主机：DAA
+[sudo] uboot 的密码： 
+tcpdump: listening on eth0, link-type EN10MB (Ethernet), capture size 262144 bytes
+
+2.2.3.1(1):
+ftp> ls
+
+2.2.3.2(2):
+09:17:42.167160 IP (tos 0x10, ttl 64, id 22153, offset 0, flags [DF], proto TCP (6), length 58)
+    192.168.122.128.36482 > 202.38.64.10.21: Flags [P.], cksum 0x4586 (incorrect -> 0xb1af), seq 1194436909:1194436915, ack 2015906048, win 237, options [nop,nop,TS val 402817 ecr 2886909022], length 6: FTP, length: 6
+	PASV
+	0x0000:  4510 003a 5689 4000 4006 9ecb c0a8 7a80  E..:V.@.@.....z.
+	0x0010:  ca26 400a 8e82 0015 4731 a92d 7828 4900  .&@.....G1.-x(I.
+	0x0020:  8018 00ed 4586 0000 0101 080a 0006 2581  ....E.........%.
+	0x0030:  ac12 bc5e 5041 5356 0d0a                 ...^PASV..
+09:17:42.376368 IP (tos 0x10, ttl 64, id 22154, offset 0, flags [DF], proto TCP (6), length 58)
+    192.168.122.128.36482 > 202.38.64.10.21: Flags [P.], cksum 0x4586 (incorrect -> 0xb17a), seq 0:6, ack 1, win 237, options [nop,nop,TS val 402870 ecr 2886909022], length 6: FTP, length: 6
+	PASV
+	0x0000:  4510 003a 568a 4000 4006 9eca c0a8 7a80  E..:V.@.@.....z.
+	0x0010:  ca26 400a 8e82 0015 4731 a92d 7828 4900  .&@.....G1.-x(I.
+	0x0020:  8018 00ed 4586 0000 0101 080a 0006 25b6  ....E.........%.
+	0x0030:  ac12 bc5e 5041 5356 0d0a                 ...^PASV..
+09:17:42.588379 IP (tos 0x10, ttl 64, id 22155, offset 0, flags [DF], proto TCP (6), length 58)
+    192.168.122.128.36482 > 202.38.64.10.21: Flags [P.], cksum 0x4586 (incorrect -> 0xb145), seq 0:6, ack 1, win 237, options [nop,nop,TS val 402923 ecr 2886909022], length 6: FTP, length: 6
+	PASV
+	0x0000:  4510 003a 568b 4000 4006 9ec9 c0a8 7a80  E..:V.@.@.....z.
+	0x0010:  ca26 400a 8e82 0015 4731 a92d 7828 4900  .&@.....G1.-x(I.
+	0x0020:  8018 00ed 4586 0000 0101 080a 0006 25eb  ....E.........%.
+	0x0030:  ac12 bc5e 5041 5356 0d0a                 ...^PASV..
+09:17:43.024377 IP (tos 0x10, ttl 64, id 22156, offset 0, flags [DF], proto TCP (6), length 58)
+    192.168.122.128.36482 > 202.38.64.10.21: Flags [P.], cksum 0x4586 (incorrect -> 0xb0d8), seq 0:6, ack 1, win 237, options [nop,nop,TS val 403032 ecr 2886909022], length 6: FTP, length: 6
+	PASV
+	0x0000:  4510 003a 568c 4000 4006 9ec8 c0a8 7a80  E..:V.@.@.....z.
+	0x0010:  ca26 400a 8e82 0015 4731 a92d 7828 4900  .&@.....G1.-x(I.
+	0x0020:  8018 00ed 4586 0000 0101 080a 0006 2658  ....E.........&X
+	0x0030:  ac12 bc5e 5041 5356 0d0a                 ...^PASV..
+09:17:43.888372 IP (tos 0x10, ttl 64, id 22157, offset 0, flags [DF], proto TCP (6), length 58)
+    192.168.122.128.36482 > 202.38.64.10.21: Flags [P.], cksum 0x4586 (incorrect -> 0xb000), seq 0:6, ack 1, win 237, options [nop,nop,TS val 403248 ecr 2886909022], length 6: FTP, length: 6
+	PASV
+	0x0000:  4510 003a 568d 4000 4006 9ec7 c0a8 7a80  E..:V.@.@.....z.
+	0x0010:  ca26 400a 8e82 0015 4731 a92d 7828 4900  .&@.....G1.-x(I.
+	0x0020:  8018 00ed 4586 0000 0101 080a 0006 2730  ....E.........'0
+	0x0030:  ac12 bc5e 5041 5356 0d0a                 ...^PASV..
+09:17:45.584370 IP (tos 0x10, ttl 64, id 22158, offset 0, flags [DF], proto TCP (6), length 58)
+    192.168.122.128.36482 > 202.38.64.10.21: Flags [P.], cksum 0x4586 (incorrect -> 0xae58), seq 0:6, ack 1, win 237, options [nop,nop,TS val 403672 ecr 2886909022], length 6: FTP, length: 6
+	PASV
+	0x0000:  4510 003a 568e 4000 4006 9ec6 c0a8 7a80  E..:V.@.@.....z.
+	0x0010:  ca26 400a 8e82 0015 4731 a92d 7828 4900  .&@.....G1.-x(I.
+	0x0020:  8018 00ed 4586 0000 0101 080a 0006 28d8  ....E.........(.
+	0x0030:  ac12 bc5e 5041 5356 0d0a                 ...^PASV..
+09:17:49.072354 IP (tos 0x10, ttl 64, id 22159, offset 0, flags [DF], proto TCP (6), length 58)
+    192.168.122.128.36482 > 202.38.64.10.21: Flags [P.], cksum 0x4586 (incorrect -> 0xaaf0), seq 0:6, ack 1, win 237, options [nop,nop,TS val 404544 ecr 2886909022], length 6: FTP, length: 6
+	PASV
+	0x0000:  4510 003a 568f 4000 4006 9ec5 c0a8 7a80  E..:V.@.@.....z.
+	0x0010:  ca26 400a 8e82 0015 4731 a92d 7828 4900  .&@.....G1.-x(I.
+	0x0020:  8018 00ed 4586 0000 0101 080a 0006 2c40  ....E.........,@
+	0x0030:  ac12 bc5e 5041 5356 0d0a                 ...^PASV..
+09:17:55.984364 IP (tos 0x10, ttl 64, id 22160, offset 0, flags [DF], proto TCP (6), length 58)
+    192.168.122.128.36482 > 202.38.64.10.21: Flags [P.], cksum 0x4586 (incorrect -> 0xa430), seq 0:6, ack 1, win 237, options [nop,nop,TS val 406272 ecr 2886909022], length 6: FTP, length: 6
+	PASV
+	0x0000:  4510 003a 5690 4000 4006 9ec4 c0a8 7a80  E..:V.@.@.....z.
+	0x0010:  ca26 400a 8e82 0015 4731 a92d 7828 4900  .&@.....G1.-x(I.
+	0x0020:  8018 00ed 4586 0000 0101 080a 0006 3300  ....E.........3.
+	0x0030:  ac12 bc5e 5041 5356 0d0a                 ...^PASV..
+09:18:09.552366 IP (tos 0x10, ttl 64, id 22161, offset 0, flags [DF], proto TCP (6), length 58)
+    192.168.122.128.36482 > 202.38.64.10.21: Flags [P.], cksum 0x4586 (incorrect -> 0x96f0), seq 0:6, ack 1, win 237, options [nop,nop,TS val 409664 ecr 2886909022], length 6: FTP, length: 6
+	PASV
+	0x0000:  4510 003a 5691 4000 4006 9ec3 c0a8 7a80  E..:V.@.@.....z.
+	0x0010:  ca26 400a 8e82 0015 4731 a92d 7828 4900  .&@.....G1.-x(I.
+	0x0020:  8018 00ed 4586 0000 0101 080a 0006 4040  ....E.........@@
+	0x0030:  ac12 bc5e 5041 5356 0d0a                 ...^PASV..
+09:18:37.968217 IP (tos 0x10, ttl 64, id 22162, offset 0, flags [DF], proto TCP (6), length 58)
+    192.168.122.128.36482 > 202.38.64.10.21: Flags [P.], cksum 0x4586 (incorrect -> 0x7b30), seq 0:6, ack 1, win 237, options [nop,nop,TS val 416768 ecr 2886909022], length 6: FTP, length: 6
+	PASV
+	0x0000:  4510 003a 5692 4000 4006 9ec2 c0a8 7a80  E..:V.@.@.....z.
+	0x0010:  ca26 400a 8e82 0015 4731 a92d 7828 4900  .&@.....G1.-x(I.
+	0x0020:  8018 00ed 4586 0000 0101 080a 0006 5c00  ....E.........\.
+	0x0030:  ac12 bc5e 5041 5356 0d0a                 ...^PASV..
+09:19:33.264362 IP (tos 0x10, ttl 64, id 22163, offset 0, flags [DF], proto TCP (6), length 58)
+    192.168.122.128.36482 > 202.38.64.10.21: Flags [P.], cksum 0x4586 (incorrect -> 0x4530), seq 0:6, ack 1, win 237, options [nop,nop,TS val 430592 ecr 2886909022], length 6: FTP, length: 6
+	PASV
+	0x0000:  4510 003a 5693 4000 4006 9ec1 c0a8 7a80  E..:V.@.@.....z.
+	0x0010:  ca26 400a 8e82 0015 4731 a92d 7828 4900  .&@.....G1.-x(I.
+	0x0020:  8018 00ed 4586 0000 0101 080a 0006 9200  ....E...........
+	0x0030:  ac12 bc5e 5041 5356 0d0a                 ...^PASV..
+09:21:21.808356 IP (tos 0x10, ttl 64, id 22164, offset 0, flags [DF], proto TCP (6), length 58)
+    192.168.122.128.36482 > 202.38.64.10.21: Flags [P.], cksum 0x4586 (incorrect -> 0xdb2f), seq 0:6, ack 1, win 237, options [nop,nop,TS val 457728 ecr 2886909022], length 6: FTP, length: 6
+	PASV
+	0x0000:  4510 003a 5694 4000 4006 9ec0 c0a8 7a80  E..:V.@.@.....z.
+	0x0010:  ca26 400a 8e82 0015 4731 a92d 7828 4900  .&@.....G1.-x(I.
+	0x0020:  8018 00ed 4586 0000 0101 080a 0006 fc00  ....E...........
+	0x0030:  ac12 bc5e 5041 5356 0d0a                 ...^PASV..
+09:23:22.640360 IP (tos 0x10, ttl 64, id 22165, offset 0, flags [DF], proto TCP (6), length 58)
+    192.168.122.128.36482 > 202.38.64.10.21: Flags [P.], cksum 0x4586 (incorrect -> 0x652f), seq 0:6, ack 1, win 237, options [nop,nop,TS val 487936 ecr 2886909022], length 6: FTP, length: 6
+	PASV
+	0x0000:  4510 003a 5695 4000 4006 9ebf c0a8 7a80  E..:V.@.@.....z.
+	0x0010:  ca26 400a 8e82 0015 4731 a92d 7828 4900  .&@.....G1.-x(I.
+	0x0020:  8018 00ed 4586 0000 0101 080a 0007 7200  ....E.........r.
+	0x0030:  ac12 bc5e 5041 5356 0d0a                 ...^PASV..
+09:23:55.991876 IP (tos 0x10, ttl 64, id 22166, offset 0, flags [DF], proto TCP (6), length 52)
+    192.168.122.128.36482 > 202.38.64.10.21: Flags [F.], cksum 0x4580 (incorrect -> 0xf546), seq 6, ack 1, win 237, options [nop,nop,TS val 496273 ecr 2886909022], length 0
+	0x0000:  4510 0034 5696 4000 4006 9ec4 c0a8 7a80  E..4V.@.@.....z.
+	0x0010:  ca26 400a 8e82 0015 4731 a933 7828 4900  .&@.....G1.3x(I.
+	0x0020:  8011 00ed 4580 0000 0101 080a 0007 9291  ....E...........
+	0x0030:  ac12 bc5e                                ...^
+
+3.1:
+uboot@DAA:~$ nslookup
+> flame.nsrl.ustc.edu.cn
+Server:		202.38.64.1
+Address:	202.38.64.1#53
+
+flame.nsrl.ustc.edu.cn	canonical name = revproxy.ustc.edu.cn.
+Name:	revproxy.ustc.edu.cn
+Address: 202.38.64.246
+
+3.2:
+> 202.38.75.11
+Server:		202.38.64.1
+Address:	202.38.64.1#53
+
+11.75.38.202.IN-ADDR.ARPA	name = infonet.ustc.edu.cn.
+
+3.3.1:
+> lserver 202.38.75.11
+Default server: 202.38.75.11
+Address: 202.38.75.11#53
+
+3.3.2:
+> flame.nsrl.ustc.edu.cn
+;; connection timed out; no servers could be reached
+
+3.3.3:
+> 202.38.75.11
+;; connection timed out; no servers could be reached
+
+3.4:
+> set all
+Default server: 202.38.64.1
+Address: 202.38.64.1#53
+Default server: 202.38.64.7
+Address: 202.38.64.7#53
+
+Set options:
+  novc			nodebug		nod2
+  search		recurse
+  timeout = 0		retry = 3	port = 53	ndots = 1
+  querytype = A       	class = IN
+  srchlist = ustc.edu.cn
+ 
+
+3.5:
+> set type=MX
+> mail.ustc.edu.cn
+Server:		202.38.64.1
+Address:	202.38.64.1#53
+
+mail.ustc.edu.cn	mail exchanger = 10 smtp2.ustc.edu.cn.
+mail.ustc.edu.cn	mail exchanger = 5 smtp1.ustc.edu.cn.
+mail.ustc.edu.cn	mail exchanger = 10 smtp.ustc.edu.cn.
+
+3.6:
+> set type=ns
+> ustc.edu.cn
+Server:		202.38.64.1
+Address:	202.38.64.1#53
+
+ustc.edu.cn	nameserver = mx.ustc.edu.cn.
+ustc.edu.cn	nameserver = ns.ustc.edu.cn.
+

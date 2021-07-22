@@ -1,0 +1,102 @@
+2  结构与模型
+
+2.1 网络的构成
+    LAN
+        Local Area Network
+        局域网
+    WiFi
+        Wireless Fidelity
+        无线热点
+    RFC
+        Request For Comments
+        请求评注
+    UWB
+        Ultra Wide Band
+        超宽带
+    ISP
+        Internet Service Provider
+        互联网服务提供商
+    ATM
+        Asynchronous Transfer Mode
+        异步传输模式
+    网络的构成
+        端系统-收发, 链路-传输, 交换系统-转发
+    功能上分
+        主干网
+        接入网
+    协议上分
+        个域网
+            无线网
+                Bluetooth
+                ZigBee
+                UWB
+        局域网
+            有线网
+                Ethernet
+            无线网
+                WiFi
+        广域网
+            PPP
+            X.25
+            ATM
+        互联网
+            IPv4
+            IPv6
+    使用者上分
+        公用网(公众用, ISP建造)
+        专用网(单位用,内部人员使用)
+    连接方式上分
+        广播型网络(共享媒体型)
+        点对点网路(交换型)
+        
+2.2 网络体系结构
+    SDU
+        Service Data Unit
+        服务数据单元
+    PDU
+        Protocol Data Unit
+        协议数据单元
+    PCI
+        Protocol Control Information
+        协议控制信息
+    SAP
+        Service Access Point
+        服务接入点
+    OSI
+        Open System Interconnection
+        开放式系统互联
+    PDU_n = PCI_n + SDU_n
+    SDU_n = PDU_{n+1}
+    模型
+        上下层间有接口,接口是下层给上层提供的服务
+        不同主机的对应层是对等实体
+        协议是两个层之间的通信规则
+    服务
+        面向连接: 可靠, 按顺序, 占用资源
+        非连接: 独自寻路, 可能顺序颠倒
+    ISO-OSI模型
+        应用层, 表示层, 会话层, 传输层, 网络层, 数据链路层, 物理层
+        D N T S P A D
+        应用层
+            进程间的收发数据信息内容
+        表示层
+            对应用层的数据表示合适的语法
+        会话层
+            对表示层的数据建立与清除信道, 交互管理, 同步, 异常报告
+        传输层
+            对会话层提供与下层无关的可靠消息传送机制
+        网络层
+            对传输层数据路由, 转发, 拥塞控制
+        数据链路层
+            对网络层数据成帧, 物理寻址, 差错控制, 流量控制, 媒体访问控制
+        物理层
+            对数据链路层数据信号编码, 传输媒介, 接口
+    TCP/IP模型
+        应用层
+            提供应用服务
+        传输层
+            提供TCP/UDP服务
+        互联网层(IP层)
+            提供非连接分组交换服务
+        网络接口层
+            硬件实现, 几乎在该模型很少提到

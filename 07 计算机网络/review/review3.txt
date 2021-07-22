@@ -1,0 +1,175 @@
+3 物理层(通用)
+
+3.1 通信基础
+    模拟信道带宽单位 Hz
+    数字信道带宽单位 bps
+    Nyquist定理(理想信道, 无干扰, 一般对2取对数)
+        最大传输速率=2BlogV
+        带宽BHz, 
+    Shannon定理(有噪信道, 无误码, 一般对2取对数)
+        最大传输速率=Blog(1+S/N)
+        带宽BHz, 信噪比S/N
+
+3.2 传输介质
+    STP
+        Shielded Twisted Pair
+        屏蔽双绞线
+    UTP
+        Unshielded Twisted Pair
+        非屏蔽双绞线
+    SI
+        Step Index
+        突变型光纤
+    GI
+        Graded Index
+        渐变型光纤
+    导向性传输媒体
+        双绞线
+            STP, UTP, 范围为100m以内, 模拟数字信号均可传递
+            STP相比UTP多了金属皮, 抗干扰防窃听, 但是更重更难布线
+            可用于传输绝大多数信号,以UTP常见
+        同轴电缆
+            基带同轴电缆, 模拟数字均可传输
+                Baseband Coax, 阻抗匹配50Ohm
+                数字信号1公里可达到1-2Gbps左右
+            宽带同轴电缆, 模拟数字均可传输
+                Broadband Coax, 阻抗匹配75Ohm
+                电视模拟信号可达800Mhz左右(FDM技术)
+                数字信号传输需要Cable Modem设备来使用
+        电力线
+            抄电表, 电网负载控制等数据传输, 不需要再布线
+            但是精度低, 衰减严重, 网络拓扑有时变性
+        光纤
+            高锟2009诺贝尔物理学奖
+            纤芯折射率大于包层
+            机械式连接与熔接连接
+            熔接更好, 信号损耗低且适合长链路, 但需要贵重特殊设备
+            光纤
+                单模
+                    纤芯中心传播
+                多模
+                    SI, 直接改变角度
+                    GI, 渐渐改变角度
+    无线传输
+        无线电, 范围很广, 开放波段2.4000-2.4835GHz
+        同步卫星, 36000km处, 时延250-300ms
+
+3.3 数字调制与多路复用
+    NRZ
+        Not Return to Zero
+        不归零
+    AM 
+        Amplitude Modulation
+        调幅
+    ASK 
+        Amplitude Shift Keying
+        幅移键控
+    FM 
+        Frequency Modulation
+        调频
+    FSK 
+        Frequency Shift Keying
+        频移键控
+    PM 
+        Phase Modulation
+        调相
+    PSK 
+        Phase Shift Keying
+        相移键控
+    FDM
+        Frequency Division Multiplexing
+        频分复用
+    TDM
+        Time Division Multiplexing
+        时分复用
+    WDM
+        Wavelength Division Multiplexing
+        波分复用
+    CDM
+        Code Division Multiplexing
+        码分复用
+    PDH
+        Plesiochronous Digital Hierarchy
+        准同步数字系列
+    SDH 
+        Synchronous Digital Hierarchy
+        同步数字系列
+    SONET
+        Synchronous Optical NETwork
+        同步光网络
+    NNI
+        Network to Network Interface
+        网络结点接口
+    CDMA
+        Code Division Multiple Access
+        码分多址
+    调制
+        把基带信号提高到已经调制的相对很高频的通带信号
+    数字调制
+        把数字信号调制成适合传输的通带模拟信号
+    多路复用
+        多用户共享信道,分为FDM, TDM, WDM, CDM
+    基带传输, 原本信号, 有单极0/1和双极-1/1两种模式, 以单极为例
+        NRZ
+            每个bit的0/1对应0/1
+        曼彻斯特编码
+            每个bit的0/1对应0->1/1->0
+        不归零逆转
+            每个bit的0/1对应无跳变/有跳变
+    通带传输, 调制信号
+        AM, ASK
+        FM, FSK
+        PM, PSK
+    复用技术
+        频分复用, 一条信道不同用户使用频率
+            需收端配合滤波器
+        时分复用, 一条信道分时间给不同用户
+            需要收发端时间同步
+            分为基于时隙的时分复用和统计时分复用
+            专用电话连接用这个方法, T1电话1.544Mbps, E1电话2.048Mbps
+            T信道
+                信道一帧有24频道和1bit帧码位, 每频道有7bit数据位和1bit符号位
+                一帧共125us, 24*(7+1)+1=193bit
+                T1速度是193/125*10^6=1.544Mbps
+                以1->4->7->6进入T2/3/4
+            数字传输网上的信号一般都是TDM之后的群路信号
+            PDH
+                复接需插入一定量脉冲实现同步
+                主要有北美T系列电话线路和欧洲E系列电话线路标准, 两者互不兼容
+            SDH
+                易复接和分接
+                SONET的标准, 后改名SDH
+                是真正的数字传输体制上的国际标准, 有世界统一的NNI
+                一帧共125us, 90*9=810B, 即51.84Mbps
+                以1->3->4进入STS3/12
+        波分复用, 一条信道分不同光波给不同用户
+            利用折射分开波, 用于光纤
+        码分复用, 一条信道用彼此正交编码, 采用双极模式-1/1
+            定义内积S*T=1/m*\sum_i(S_i*T_i)
+            m是信号长度,S和T是两个信号
+            
+3.4 交换技术
+    电路交换
+        TDM或FDM, 如传统电话网络
+        直接建立物理连接直至通信结束
+        建立连接之后, 唯一延时是电磁波传输时间
+        可靠, 迅速, 不丢包, 保序
+    存储交换
+        报文交换, 如电报网络, 深空通信网
+            以报文整体为单位, 端系统一次性发送数据块
+            数据块长度不限且可变
+        分组交换
+            将报文分组传送, 端系统分别发送
+            长度有限且大小有范围限制, 但是可以多次发送
+            数据报交换网络, 如IP网络
+                无连接分组交换
+            虚电路网络, 如ATM网络
+                面向连接的分组交换
+    延时分析
+        传播延时prop, 取决于光速等信号速度
+        传输延时trans, 取决于发送整个分组时间
+        处理延时pro, 取决于发送方CPU性能
+        排队延时queue, 取决于网络拥塞状况
+    1个分组交换总延时
+        总prop+\sum_{转发节点(不算首尾)}(trans+pro+queue)+trans
+    n个分组需要在1个分组延时基础上把最后一个trans变成n*trans

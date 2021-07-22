@@ -1,0 +1,61 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             RESET,CODE,READONLY
+    2 00000000         ENTRY
+    3 00000000 F04F 0011       MOV              R0, #0x11
+    4 00000004 F04F 01AB       MOV              R1, #0xab
+    5 00000008 4408            ADD              R0, R1
+    6 0000000A EA4F 0181       LSL              R1, #2
+    7 0000000E         LOOP
+    8 0000000E E7FE            B                LOOP
+    9 00000010         END
+                       
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp --apcs=int
+erwork --depend=.\objects\example.d -o.\objects\example.o -I.\RTE\_asm -IC:\Kei
+l_v5\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include -IC:\Keil_v5\ARM\CMSIS\In
+clude --predefine="__EVAL SETA 1" --predefine="__UVISION_VERSION SETA 526" --pr
+edefine="STM32F40_41xxx SETA 1" --list=.\listings\example.lst example.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+END 00000010
+
+Symbol: END
+   Definitions
+      At line 9 in file example.s
+   Uses
+      None
+Comment: END unused
+ENTRY 00000000
+
+Symbol: ENTRY
+   Definitions
+      At line 2 in file example.s
+   Uses
+      None
+Comment: ENTRY unused
+LOOP 0000000E
+
+Symbol: LOOP
+   Definitions
+      At line 7 in file example.s
+   Uses
+      At line 8 in file example.s
+Comment: LOOP used once
+RESET 00000000
+
+Symbol: RESET
+   Definitions
+      At line 1 in file example.s
+   Uses
+      None
+Comment: RESET unused
+4 symbols
+338 symbols in table

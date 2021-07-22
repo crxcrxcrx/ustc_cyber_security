@@ -1,0 +1,3 @@
+Dependencies for Project 'test', Target 'asm': (DO NOT MODIFY !)
+F (.\example.c)(0x60CD5710)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork --split_sections-I.\RTE\_asm-IC:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="526" -DSTM32F40_41xxx-o .\objects\example.o --omf_browse .\objects\example.crf --depend .\objects\example.d)
+F (.\main.s)(0x60CD59E8)(--cpu Cortex-M4.fp --pd "__EVAL SETA 1" -g --apcs=interwork -I.\RTE\_asm-IC:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 526" --pd "STM32F40_41xxx SETA 1"--list .\listings\main.lst --xref -o .\objects\main.o --depend .\objects\main.d)

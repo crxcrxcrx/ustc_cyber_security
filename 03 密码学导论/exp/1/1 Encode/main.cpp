@@ -1,0 +1,63 @@
+//把plt.txt按照key.txt通过Vigenere算法加密存储到cip.txt 
+//为了便于识别,每个txt文本在文本结束之后都会有一个'#'作为结束符 
+#include<stdio.h>
+#include"STRINGHEAP.h"
+#include"VIGENERE.h"
+main(){
+	int err;
+	FILE *fkey,*fplt,*fcip;
+	String *skey,*splt,*scip;
+	//初始化 
+	fkey=fopen("key.txt","r");
+	if(fkey==NULL){
+		printf("key.txt读取失败\n");
+		return(1);
+	}
+	fplt=fopen("plt.txt","r");
+	if(fplt==NULL){
+		printf("plt.txt读取失败\n");
+		return(1);
+	}
+	fcip=fopen("cip.txt","w");
+	if(fcip==NULL){
+		printf("cip.txt读取失败\n");
+		return(1);
+	}
+	err=InitString(skey);
+	if(err!=0){
+		printf("字符串初始化失败\n");
+		return(2);
+	}
+	err=InitString(splt);
+	if(err!=0){
+		printf("字符串初始化失败\n");
+		return(2);
+	}
+	err=InitString(scip);
+	if(err!=0){
+		printf("字符串初始化失败\n");
+		return(2);
+	}
+	//读取字符串 
+	FileScanString(skey,fkey);
+	printf("密钥读取成功\n\n");
+	FileScanString(splt,fplt);
+	printf("明文读取成功\n\n");
+	//加密
+	err=VigenereEncode(skey,splt,scip);
+	if(err!=0){
+		printf("加密出错\n");
+		return(3);
+	}
+	printf("加密结果：\n\n");
+	PrintString(scip);
+	printf("\n\n");
+	FilePrintString(scip,fcip);
+	printf("密文存储在 cip.txt\n\n");
+	fclose(fkey);
+	fclose(fplt);
+	fclose(fcip);
+	DestroyString(skey);
+	DestroyString(splt);
+	DestroyString(scip);
+}

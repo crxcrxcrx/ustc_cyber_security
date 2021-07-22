@@ -1,0 +1,2 @@
+Dependencies for Project 'test', Target 'asm': (DO NOT MODIFY !)
+F (.\example.s)(0x60CD5363)(--cpu Cortex-M4.fp -g --apcs=interwork -I "D:\微机原理与嵌入式系统\源码\实验6.3.1 汇编1-100累加\RTE"-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil_v5\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 514" --pd "STM32F40_41xxx SETA 1"--list .\listings\example.lst --xref -o .\objects\example.o --depend .\objects\example.d)

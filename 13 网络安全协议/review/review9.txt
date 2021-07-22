@@ -1,0 +1,130 @@
+9 无线网安全
+
+9.1 无线网络技术概述
+    分类
+        无线广域网
+            2G, 3G, 4G等
+        无线城域网
+            移动电话, 车载移动数据通信
+        无线局域网
+            家用WIFI
+        无线个域网
+            ZigBee, Bluetooth 
+
+9.2 WLAN概述
+    DS 
+        Distribution System 
+        分布式系统
+    BSS 
+        Basic Service Set 
+        基础服务集合
+    IBSS
+        Independent Basic Service Set 
+        独立基础服务集合
+    ESS 
+        Extended Service Set 
+        扩展服务集合
+    WLAN的建立方式
+        AdHoc网络, STA直接相互连接入网
+            所有设备构成IBSS
+        Infrastructure网络, STA通过AP连接入网
+            接入同一个AP的构成一个BSS
+            DS内所有AP构成一个ESS
+    OSI参考模型
+        物理层
+        数据链路层
+            MAC子层
+                数据帧, 控制帧, 管理帧等
+            LLC子层
+    WLAN是有线网的延伸
+        无缝切换同一网络不同AP
+        跨域漫游数据同步
+
+9.3 WLAN安全需求
+    SSID 
+        Service Set IDentifier
+        服务集标识符
+    RADIUS
+        Remote Authentication Dial In User Service
+        远程用户拨号认证服务
+    WEP 
+        Wired Equivalent Privacy
+        有线等效保密
+    LEAP 
+        Lightweight Extensible Authentication Protocol
+        轻量级可扩展身份验证协议
+    常见攻击类型
+        窃听
+        通信阻断
+        数据注入与篡改
+        中间人攻击
+        客户端与接入点伪造
+    WLAN安全机制
+        用户认证
+            用SSID标识用户
+            MAC地址过滤
+            基于安全参数认证方式
+            外部RADIUS基础设施
+        用户授权
+            细粒度的授权需要外部基础设施辅助
+        数据安全
+            静态密钥基础
+                WEP协议
+            动态密钥基础
+                LEAP协议
+                802.1x协议族
+    802.11的安全机制
+        身份认证
+            开放式系统
+                传统802.11缺省配置, 公开SSID
+            封闭式系统
+                不公开SSID
+            共享密钥认证
+                通过共享密钥完成认证
+        数据机密性
+            WEP使用40/104bit的密钥, 24bit的IV
+        数据完整性
+            CRC32
+        认证
+            WEP采用基于预共享密钥的挑战应答
+                STA->AP 认证请求
+                AP 产生128bit挑战码
+                AP->STA 挑战码
+                STA 使用WEP进行RC4加密运算
+                STA->AP 应答
+                AP 利用WEP与RC4进行解密后与挑战码比对
+                AP->STA 确认身份的结果
+
+9.4 WEP协议
+    BSS中共享一个密钥
+    用RC4进行流式加密算法
+    24bit的IV
+    附加一个CRC32的校验和来检验完整性
+    基本功能
+        访问控制
+        数据保密性
+    协议弱点
+        密钥使用不规范
+            共享固定, 直接加密时会暴露, 密钥长度较低
+        初始向量IV
+            24bit明码传送不合理
+            厂商设计上, IV从0开始
+            IV长度不足导致容易重复
+        数据完整性校验位
+            CRC32校验无法对数据预先进行完整性判断
+        无法提供数据源和目的端地址的完整性校验信息
+        无法抵御重放攻击
+        没有对接入设备进行认证
+    攻击手段
+        扫描SSID, Channel
+        暴力猜密钥
+        已知明文信息与猜测原文攻击
+        利用RC4漏洞
+        CRC容易伪造
+
+9.5 802.11安全增强 
+    新增加长到104bit的WEP密钥
+    标准的密钥交换和分发流程, 可用其他协议辅助实现
+    使用带密钥的MAC算法进行数据完整性校验
+    双向认证抵抗窃取数据与会话劫持
+    扩展了其他的安全协议

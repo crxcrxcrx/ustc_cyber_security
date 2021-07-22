@@ -1,0 +1,5 @@
+main()
+{ char ch;
+  ch='\\';
+  show(ch);
+}

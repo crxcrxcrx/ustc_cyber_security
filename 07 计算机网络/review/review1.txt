@@ -1,0 +1,84 @@
+1	概览
+
+1.1 Internet的发展史
+    ARPAnet
+        Advanced Research Projects Agency network
+        阿帕网, Internet前身
+    TCP/IP
+        Transmission Control Protocol/ Internet Protocol
+        某协议
+    DNS
+        Domain Name System
+        域名系统
+    NSFnet
+        National Science Foudation network
+        美国国家科学基金会网络
+    WWW
+        World Wide Web, 万维网
+    NII
+        National Information Infrastructure
+        国家资讯基础建设
+    GII
+        Global Information Infrastructure
+        全球信息基础设施
+    NGI
+        Next Generation Internet
+        下一代互联网, 狭义讲是IPv6
+    GENI
+        Global Environment for Networking Innovation
+        某个下一代互联网
+    FIND
+        Future INternet Design
+        未来网络设计
+    VoIP
+        Voice over Internet Protocol
+        IP电话
+        
+1.2 中国Internet的发展史
+    NCFC
+        National Computing and networking Facility of China
+        中国国家计算机与网络设施
+    CSTNet
+        China Science and Technology Network
+        中国科学技术网
+    InterNIC
+        Internet Network Information Center
+        国际互联网络信息中心
+    Chinanet
+        China public computer internet
+        中国公用计算机互联网
+    Cernet
+        China education and research network
+        中国教育和科研计算机网
+    ChinaGBN
+        China Golden Bridge Network
+        中国金桥网, 中国国家公用经济信息通信网
+    CNNIC
+        China Internet Network Information Center
+        中国互联网络信息中心
+    FDDI
+        Fiber Distributed Data Interface
+        光纤分布式数据接口
+
+1.3 IPv6发展史
+    6bone
+        IETF用来测试IPv6的网络
+    1.6	国际组织
+    ITU
+        International Telecommunication Union
+        国际电信联盟
+    ISO
+        International Organization for Standardization
+        国际标准化组织
+    IEEE
+        Institute of Electrical and Electronics Engineers
+        电气与电子工程师协会
+    IETF
+        Internet Engineering Task Force
+        互联网工程任务组
+    IRTF
+        Internet Research Task Force
+        互联网研究任务组
+    ANSI
+        American National Standards Institute
+        美国国家标准协会
