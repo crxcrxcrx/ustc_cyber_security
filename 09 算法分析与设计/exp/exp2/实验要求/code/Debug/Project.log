@@ -1,3 +1,0 @@
-﻿  Lab2.cpp
-d:\ustc\subject\11 2021 春\2 算法分析与设计\exp\exp2\lab2\code\lab2.cpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-d:\ustc\subject\11 2021 春\2 算法分析与设计\exp\exp2\lab2\code\lab2.cpp(180): error C3861: “RBTree_test”: 找不到标识符
