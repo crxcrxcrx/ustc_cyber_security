@@ -278,11 +278,10 @@
 ### 网络安全协议
 
 -   教材: 网络安全基础应用于标准 ( 第5版 ) , 清华大学出版社, William Stallings
--   教学内容: 网络安全综述, 公钥基础设施, IPSec的AH/ESP/IKE协议, SSL/TLS协议, 防火墙与NAT, VPN, 应用层安全协议, 无线网安全
--   实验内容: 文献调研, IETF工作调研, Linux防火墙配置与地址转换, OpenSSL系统分析和应用, GnuPG原理和使用, IPSecVPN搭建, FreeRadius搭建和使用, Linux下常见服务器搭建, PKI/CA体系和EJBCA的搭建
+-   教学内容: 网络安全综述, 公钥基础设施, IPSec的AH/ESP/IKE协议, SSL/TLS协议, 防火墙与NAT虚拟专用网, 应用层安全协议, 无线网安全
+-   实验内容: 文献调研, IETF工作调研, Linux防火墙配置与地址转换, OpenSSL系统分析和应用, GnuPG原理和使用, IPSec虚拟专用网搭建, FreeRadius搭建和使用, Linux下常见服务器搭建, PKI/CA体系和EJBCA的搭建
     -   这些内容做一个就行
     -   也可以自选题, 需要老师助教核定
-
 -   有小测, 随机点名
 -   需要多记很多概念以及英文缩写的全名, 建议平时认真学
 
