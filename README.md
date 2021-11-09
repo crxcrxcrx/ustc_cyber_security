@@ -8,7 +8,7 @@
 
 首先给出课程框架
 
-![course](https://gitee.com/PB18061383/ustc_cyber_security/raw/master/markdown_assets/course.jpg)
+![course](markdown_assets/course.jpg)
 
 然后往死里卷就完事了 ( 狗头 ) 
 
