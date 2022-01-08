@@ -5,7 +5,7 @@
     数字信道带宽单位 bps
     Nyquist定理(理想信道, 无干扰, 一般对2取对数)
         最大传输速率=2BlogV
-        带宽BHz, 
+        带宽BHz
     Shannon定理(有噪信道, 无误码, 一般对2取对数)
         最大传输速率=Blog(1+S/N)
         带宽BHz, 信噪比S/N
@@ -172,4 +172,6 @@
         排队延时queue, 取决于网络拥塞状况
     1个分组交换总延时
         总prop+\sum_{转发节点(不算首尾)}(trans+pro+queue)+trans
-    n个分组需要在1个分组延时基础上把最后一个trans变成n*trans
+    n个分组交换总延时
+        总prop+\sum_{转发节点(不算首尾)}(trans+pro+queue)+n*trans
+        n个分组需要在1个分组延时基础上把最后一个trans变成n*trans
