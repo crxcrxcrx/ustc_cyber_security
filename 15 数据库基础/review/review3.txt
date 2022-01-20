@@ -1,0 +1,378 @@
+3 关系数据库标准查询语言SQL
+
+3.1 SQL概述
+    SQL 
+        Standard/Structured Query Language
+        关系数据库标准查询语言
+    DDL
+        Data Definition/Description Language
+        数据定义语言
+    DML
+        Data Manipulation Language
+        数据操纵语言
+    DCL
+        Data Control Language
+        数据控制语言
+    SQL组成
+        DDL 
+            数据定义
+                操作表或视图
+                    定义
+                    删除
+                    修改
+                索引表
+                    建立
+                    删除
+            关键词
+                create
+                drop 
+                alter
+        DML 
+            数据操纵
+                查询数据
+                更新数据
+                    插入
+                    删除
+                    修改
+            关键词
+                select
+                insert 
+                delete 
+                update 
+        DCL 
+            数据控制
+                授权
+                完整性规则描述
+                事务控制
+            关键词
+                grant 
+                revoke 
+                commit 
+                rollback
+        嵌入式SQL
+            在宿主语言中使用SQL规则
+
+3.2 数据定义语言DDL 
+    定义
+        语法
+            create table <表名> 
+            (
+                <列名> <数据类型> [ <列约束条件> ]      //..1..
+                [, ..1..]
+                [, <表约束条件> ]
+            );
+        列约束条件
+            not null unique
+                非空唯一
+        表约束条件
+            primary key ( <列名> )
+                主键设置
+    删除
+        语法
+            drop table <表名>;
+    修改
+        语法
+            alter table <表名>
+                [add <列名> <数据类型> [ <列约束条件> ] ] |
+                [drop [ <列约束条件> ] ] |
+                [modify <列名> <数据类型> [ <列约束条件> ] ]
+    建立索引
+        语法
+            create [ <索引性质> ] index <索引名>
+            on <表名> 
+            (
+                <列名> [次序]       //..1..
+                [, ..1..]
+            );
+        次序
+            acs
+                升序
+            desc 
+                降序
+        索引性质
+            unique
+                唯一索引, 对候选键建立索引, 不一定是主键
+            cluster 
+                聚集索引, 索引项的数据与表中记录的物理顺序一致的索引组织
+    删除索引
+        语法
+            drop index [ <表名>. ] <索引名>;
+
+3.3 数据操纵语言DML 
+    查询
+        语法
+            select [ <查询性质> ] 
+                * |
+                [
+                    <目标表达式>    //..1..
+                    [, ..1..]
+                ]
+            from
+                <表名或视图名>       //..2..
+                [, ..2..]
+            [where <条件表达式> ]
+            [
+                group by 
+                <列名>      //..3..
+                [, ..3..]
+            ]
+            [having <条件表达式>]
+            [
+                order by 
+                <列名> [次序]       //..4..
+                [, ..4..]
+            ];
+        查询执行顺序
+            from->where->select->group->having->order
+        查询性质
+            all
+                全部行
+            distinct 
+                去重行
+        条件表达式
+            比较大小
+                <
+                    小于
+                >
+                    大于
+                <=
+                    小于等于
+                >=
+                    大于等于
+                =
+                    等于
+                <>
+                    不等于
+            确定范围
+                between ... and ... 
+                    两边都包含
+            确定集合
+                in (<元素>)
+                    元素用逗号分隔
+            字符匹配
+                like
+                    转义符是 \ 
+                    多字是 % 
+                    单字是 _ 
+                    某字符是 [<元素>, ...]
+                    不含某字符是 [!<元素>, ...]
+            查询空值
+                is null 
+            多重条件
+                用and并列
+            聚合计算函数
+                count 
+                (
+                    [distinct]
+                    * |
+                    <列名>
+                )
+                sum ( <列名> )
+                avg ( <列名> )
+                max( <列名> )
+                min ( <列名> )
+            不定函数
+                any ( <表名或视图名> )
+                    某一元素
+                all ( <表名或视图名> )
+                    所有元素
+            布尔函数
+                exists ( <表名或视图名> )
+                    是否存在返回值决定返回1或0
+        集合运算
+            intersect
+                交集
+            union
+                并集
+            minus
+                差集
+    插入
+        语法
+            insert into <表名> 
+            [
+                [
+                    <列名>      //..1..
+                    [, ..1..]
+                ]
+                values [
+                    <常量>      //..2..
+                    [, ..2..]
+                ]
+            ] |
+            <子查询>;
+    删除
+        语法
+            delete from <表名>
+            [where <条件表达式> ];
+    修改
+        语法
+            update <表名> set 
+                <列名>=<表达式>     //..1..
+                [, ..1..]
+            [where <条件表达式> ];
+
+3.4 数据控制语言DCL
+    授权
+        语法
+            grant 
+            {
+                all privileges |
+                <权限>      //..1..
+                [, ..1..]
+            }
+            [ on <对象类型> <对象名> ]
+            to
+            {
+                public |
+                <用户>      //..2..
+                [, ..2..]
+            }
+            [with grant option]
+        with grant option
+            可以让被授权用户给其他用户授予该用户已有的权限
+    收权
+        语法
+            revoke 
+            {
+                all privileges |
+                <权限>      //..1..
+                [, ..1..]
+            }
+            [ on <对象类型> <对象名> ]
+            from
+            {
+                public |
+                <用户>      //..2..
+                [, ..2..]
+            }
+    提交
+        commit, 不做赘述
+    回滚
+        rollback, 不做赘述
+
+3.5 视图对表的类比
+    定义视图
+        语法
+            create view <视图名> 
+            [ (
+                <列名>      //..1..
+                [, ..1..]
+            ) ]
+            as <子查询>
+            [with check option];
+        with check option
+            自动验证子查询条件
+        子查询
+            见下DML的查询
+    删除视图
+        语法
+            drop view <视图名>;
+    查询, 修改, 插入, 删除视图操作与表类似, 但消解需要关注定义视图的as信息
+
+3.6 嵌入式SQL语言
+    ESQL
+        Embedded Standard/Structured Query Language
+        嵌入式关系数据库标准查询语言
+    SQLCA 
+        Standard/Structured Query Language Communication Area
+        关系数据库标准查询语言通信区
+    基本语法
+        exec sql
+            <sql语句>
+    ESQL根据作用分成两类
+        可执行语句
+            DDL, DML, DCL
+        说明性语句
+            exec sql include sqlca
+            exec sql begin declare section 
+            exec sql end declare section 
+    数据库工作单元和主语言工作单元通信内容
+        数据库向主语言传递SQL语句工作状态
+            SQLCA
+                是一个数据结构
+                反应每次执行SQL语句的结果
+            传递状态语法
+                exec sql include sqlca 
+        主语言向SQL语句提供参数 
+            主变量
+                ESQL可以使用主语言变量输入输出数据
+                数据定义语句不允许使用主变量
+                可以在任意表达式的对方出现
+                SQL语句中, 主变量前加:, 而主语言前不必这样
+                into, where, having的子句中可以有主变量, 须事先声明
+                如结果不止单条, 程序出错, sqlca包含返回信息
+                输入主变量
+                    给SQL传的参数
+                输出主变量
+                    返回给主语言的参数
+                指示变量
+                    用于为输入变量赋空值或指示输出变量是否为空
+                    类似于函数返回值
+            定义主变量语法
+                exec sql begin declare section 
+                    <主变量>
+                exec sql end declare section
+        SQL语句查询数据库结果交给主语言进一步处理
+            游标
+                SQL语句面向集合, 而主语言面向记录
+                主语言-SQL语言-数据库
+                    SQL语言用主变量从主语言接收执行参数
+                    SQL语言执行状态由DBMS送到SQLCA
+                    主语言从SQLCA取出状态信息决定下一步操作
+                    SQL执行结果通过主变量或游标传给主语言处理
+                使用游标的SQL语句
+                    查询结果为多条记录的select语句
+                    current的delete语句
+                    current的update语句
+                不使用游标的SQL语句
+                    说明性语句
+                    DDL
+                    DML 
+                        查询结果为单条记录的select语句
+                        insert语句
+                        非current的delete语句
+                        非current的update语句
+                    DCL
+            说明游标语法
+                exec sql declare <游标名> cursor for 
+                    <select语句>
+            打开游标语法
+                exec sql open <游标名>
+            读取当前记录并推进游标指针语法
+                exec sql fetch <游标名>
+                    into <主变量> [指示变量]    //..1..
+                    [, ..1..]
+            关闭游标语法
+                exec sql close <游标名>
+
+3.7 存储过程
+    变量
+        @是用户变量
+        @@是全局变量
+    语句块语法
+        begin
+            <语句块>
+        end
+    条件语法
+        if <条件>
+            <语句>
+        [else
+            <语句> ]
+    循环语法
+        while <条件>
+            <语句>
+    跳转语法
+        <标签>:
+        goto <标签>
+    返回语法
+        return <整型表达式>
+    声明过程语法
+        create procedure [owner.] <过程名>
+            [ @<变量名> <变量类型> [=<默认值> ] [ <输出值> ] ]   //..1..
+            [, ..1..]
+            [with recompile]
+            as <SQL语句>
+    执行过程语法
+        execute <过程名> 
+            <参数> [output] //..1..
+            [, ..1..]
