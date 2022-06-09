@@ -1,0 +1,44 @@
+rm -f *~ *.o libmem.so
+gcc -g -fPIC  -Wall   -c -o memlib.o memlib.c
+gcc -g -fPIC  -Wall   -c -o mm.o mm.c
+gcc -g -fPIC  -Wall -shared -o libmem.so mm.o memlib.o
+before free: 0.971756; after free: 0.218191
+time of loop 0 : 365ms
+before free: 0.972013; after free: 0.21671
+time of loop 1 : 1683ms
+before free: 0.97098; after free: 0.220482
+time of loop 2 : 1842ms
+before free: 0.967861; after free: 0.218587
+time of loop 3 : 1814ms
+before free: 0.964814; after free: 0.213779
+time of loop 4 : 1908ms
+before free: 0.966367; after free: 0.216487
+time of loop 5 : 1769ms
+before free: 0.963816; after free: 0.215147
+time of loop 6 : 1795ms
+before free: 0.96706; after free: 0.216017
+time of loop 7 : 1784ms
+before free: 0.961426; after free: 0.213796
+time of loop 8 : 1764ms
+before free: 0.971067; after free: 0.215638
+time of loop 9 : 1752ms
+before free: 0.968797; after free: 0.216595
+time of loop 10 : 1777ms
+before free: 0.967509; after free: 0.219914
+time of loop 11 : 1776ms
+before free: 0.970482; after free: 0.218297
+time of loop 12 : 1771ms
+before free: 0.970283; after free: 0.215842
+time of loop 13 : 1775ms
+before free: 0.972177; after free: 0.217414
+time of loop 14 : 1745ms
+before free: 0.967307; after free: 0.216914
+time of loop 15 : 1827ms
+before free: 0.963667; after free: 0.215681
+time of loop 16 : 1759ms
+before free: 0.963825; after free: 0.216463
+time of loop 17 : 1762ms
+before free: 0.964158; after free: 0.215265
+time of loop 18 : 1804ms
+before free: 0.967493; after free: 0.217325
+time of loop 19 : 1738ms
