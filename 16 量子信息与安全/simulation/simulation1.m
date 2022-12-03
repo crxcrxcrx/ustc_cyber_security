@@ -26,7 +26,7 @@ for i = 1:2000
     % 根据相关公式计算信号态安全密钥率
     p_mu__l__ = exp(-mu) * mu;
     Y_l = mu / (mu * nu - nu ^ 2) * (exp(nu) * Q_nu - nu ^ 2 / mu ^ 2 * exp(mu) * Q_mu - (mu ^ 2 - nu ^ 2) / mu ^ 2 * Y_0);
-    e_l = (E_nu * Q_nu * exp(nu) - Y_0 / 2) / nu * Y_l;
+    e_l = (E_nu * Q_nu * exp(nu) - Y_0 / 2) / (nu * Y_l);
     Arr_R(i) = max(0, 1/2 * (-Q_mu * f__E_mu__ * Entropy2(E_mu) + p_mu__l__ * Y_l * (1 - Entropy2(e_l))));
     if Arr_R(i) == 0
         disp(Arr_l(i));
