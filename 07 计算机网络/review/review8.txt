@@ -269,11 +269,11 @@
                     Jacobson
                         性能测试, 动态调整
                         对每条链接, TCP保存变量RTT
-                        RTT_{n}=a*RTT_{n-1}+(1-a)M_n
+                        RTT_{n}=a*RTT_{n-1}+(1-a)M_{n}
                         a是修正因子, M是新增的往返时延(a一般是7/8)
-                        D_{n}=bD_{n-1}+(1-b)|RTT_{n}-M_n|
+                        D_{n}=b*D_{n-1}+(1-b)|RTT_{n-1}-M_{n}|
                         b是另一个修正因子(可能和前者不一样), D是超时间隔
-                        Timeout_{n}=RTT_n+4D_{n}
+                        Timeout_{n}=RTT_{n}+4D_{n}
                     Karn
                         对已重发数据无需修改RTT
                         在传输失败时将超时时间Timeout加倍
