@@ -1,0 +1,36 @@
+graph action {
+    // node [shape = circle];
+	epoll [shape = plaintext, label = "22 是第 2 大元素"]
+    node_11[label = "22"]
+    node_21[label = "22"]
+    node_22[label = "11"]
+    node_31[label = "22"]
+    node_32[label = "17"]
+    node_33[label = "9"]
+    node_34[label = "11"]
+    node_41[label = "22"]
+    node_42[label = "8"]
+    node_43[label = "14"]
+    node_44[label = "17"]
+    node_45[label = "3"]
+    node_46[label = "9"]
+    node_47[label = "-∞"]
+    node_48[label = "11"]
+
+    node_11 -- node_21
+    node_11 -- node_22
+
+    node_21 -- node_31
+    node_21 -- node_32
+    node_22 -- node_33
+    node_22 -- node_34
+
+    node_31 -- node_41
+    node_31 -- node_42
+    node_32 -- node_43
+    node_32 -- node_44
+    node_33 -- node_45
+    node_33 -- node_46
+    node_34 -- node_47
+    node_34 -- node_48
+}
