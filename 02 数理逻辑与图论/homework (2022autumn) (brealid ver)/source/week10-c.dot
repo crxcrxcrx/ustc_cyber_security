@@ -1,0 +1,531 @@
+graph action {
+    node_139 -- node_140
+    node_140 -- node_141
+    node_141 -- node_142
+    node_142 -- node_143
+    node_143[shape = ellipse, label = "1\n(-4)"]
+    node_142 -- node_144
+    node_144[shape = ellipse, label = "1\n(-4)"]
+    node_142[shape = record, label = "1 1\n(-4)"]
+    node_141 -- node_145
+    node_145[shape = record, label = "1\n(3)"]
+    node_141 -- node_146
+    node_146 -- node_147
+    node_147[shape = ellipse, label = "1\n(-4)"]
+    node_146[shape = record, label = "2\n(-4)"]
+    node_141[shape = ellipse, label = "2 1\n(3)"]
+    node_140 -- node_148
+    node_148 -- node_149
+    node_149 -- node_150
+    node_150[shape = ellipse, label = "1\n(-4)"]
+    node_149 -- node_151
+    node_151[shape = ellipse, label = "1\n(-4)"]
+    node_149[shape = record, label = "1 1\n(-4)"]
+    node_148 -- node_152
+    node_152 -- node_153
+    node_153[shape = ellipse, label = "1\n(-4)"]
+    node_152 -- node_154
+    node_154[shape = ellipse, label = "1\n(-4)"]
+    node_152[shape = record, label = "1 1\n(-4)"]
+    node_148 -- node_155
+    node_155 -- node_156
+    node_156[shape = ellipse, label = "1\n(-4)"]
+    node_155 -- node_157
+    node_157[shape = ellipse, label = "1\n(-4)"]
+    node_155[shape = record, label = "1 1\n(-4)"]
+    node_148[shape = ellipse, label = "1 1 1\n(-4)"]
+    node_140 -- node_158
+    node_158 -- node_159
+    node_159[shape = record, label = "1\n(3)"]
+    node_158 -- node_160
+    node_160[shape = record, label = "1\n(3)"]
+    node_158[shape = ellipse, label = "1 1\n(3)"]
+    node_140 -- node_161
+    node_161 -- node_162
+    node_162 -- node_163
+    node_163[shape = ellipse, label = "1\n(-4)"]
+    node_162[shape = record, label = "2\n(-4)"]
+    node_161 -- node_164
+    node_164 -- node_165
+    node_165[shape = ellipse, label = "1\n(-4)"]
+    node_164 -- node_166
+    node_166[shape = ellipse, label = "1\n(-4)"]
+    node_164[shape = record, label = "1 1\n(-4)"]
+    node_161 -- node_167
+    node_167[shape = record, label = "1\n(3)"]
+    node_161[shape = ellipse, label = "1 2\n(3)"]
+    node_140[shape = record, label = "1 2 1\n(-4)"]
+    node_139 -- node_168
+    node_168 -- node_169
+    node_169 -- node_170
+    node_170 -- node_171
+    node_171 -- node_172
+    node_172[shape = record, label = "1\n(5)"]
+    node_171 -- node_173
+    node_173[shape = record, label = "1\n(5)"]
+    node_171[shape = ellipse, label = "1 1\n(5)"]
+    node_170 -- node_174
+    node_174[shape = ellipse, label = "1\n(-4)"]
+    node_170 -- node_175
+    node_175 -- node_176
+    node_176[shape = record, label = "1\n(5)"]
+    node_175[shape = ellipse, label = "2\n(5)"]
+    node_170[shape = record, label = "2 1\n(-4)"]
+    node_169 -- node_177
+    node_177 -- node_178
+    node_178 -- node_179
+    node_179[shape = record, label = "1\n(5)"]
+    node_178 -- node_180
+    node_180[shape = record, label = "1\n(5)"]
+    node_178[shape = ellipse, label = "1 1\n(5)"]
+    node_177 -- node_181
+    node_181 -- node_182
+    node_182[shape = record, label = "1\n(5)"]
+    node_181 -- node_183
+    node_183[shape = record, label = "1\n(5)"]
+    node_181[shape = ellipse, label = "1 1\n(5)"]
+    node_177 -- node_184
+    node_184 -- node_185
+    node_185[shape = record, label = "1\n(5)"]
+    node_184 -- node_186
+    node_186[shape = record, label = "1\n(5)"]
+    node_184[shape = ellipse, label = "1 1\n(5)"]
+    node_177[shape = record, label = "1 1 1\n(5)"]
+    node_169 -- node_187
+    node_187 -- node_188
+    node_188[shape = ellipse, label = "1\n(-4)"]
+    node_187 -- node_189
+    node_189[shape = ellipse, label = "1\n(-4)"]
+    node_187[shape = record, label = "1 1\n(-4)"]
+    node_169 -- node_190
+    node_190 -- node_191
+    node_191 -- node_192
+    node_192[shape = record, label = "1\n(5)"]
+    node_191[shape = ellipse, label = "2\n(5)"]
+    node_190 -- node_193
+    node_193 -- node_194
+    node_194[shape = record, label = "1\n(5)"]
+    node_193 -- node_195
+    node_195[shape = record, label = "1\n(5)"]
+    node_193[shape = ellipse, label = "1 1\n(5)"]
+    node_190 -- node_196
+    node_196[shape = ellipse, label = "1\n(-4)"]
+    node_190[shape = record, label = "1 2\n(-4)"]
+    node_169[shape = ellipse, label = "1 2 1\n(5)"]
+    node_168 -- node_197
+    node_197 -- node_198
+    node_198 -- node_199
+    node_199[shape = ellipse, label = "1\n(-4)"]
+    node_198 -- node_200
+    node_200[shape = ellipse, label = "1\n(-4)"]
+    node_198[shape = record, label = "1 1\n(-4)"]
+    node_197 -- node_201
+    node_201[shape = record, label = "1\n(3)"]
+    node_197 -- node_202
+    node_202 -- node_203
+    node_203[shape = ellipse, label = "1\n(-4)"]
+    node_202[shape = record, label = "2\n(-4)"]
+    node_197[shape = ellipse, label = "2 1\n(3)"]
+    node_168 -- node_204
+    node_204 -- node_205
+    node_205 -- node_206
+    node_206 -- node_207
+    node_207[shape = record, label = "1\n(5)"]
+    node_206 -- node_208
+    node_208[shape = record, label = "1\n(5)"]
+    node_206[shape = ellipse, label = "1 1\n(5)"]
+    node_205 -- node_209
+    node_209 -- node_210
+    node_210[shape = record, label = "1\n(5)"]
+    node_209 -- node_211
+    node_211[shape = record, label = "1\n(5)"]
+    node_209[shape = ellipse, label = "1 1\n(5)"]
+    node_205 -- node_212
+    node_212 -- node_213
+    node_213[shape = record, label = "1\n(5)"]
+    node_212 -- node_214
+    node_214[shape = record, label = "1\n(5)"]
+    node_212[shape = ellipse, label = "1 1\n(5)"]
+    node_205[shape = record, label = "1 1 1\n(5)"]
+    node_204 -- node_215
+    node_215 -- node_216
+    node_216[shape = ellipse, label = "1\n(-4)"]
+    node_215 -- node_217
+    node_217[shape = ellipse, label = "1\n(-4)"]
+    node_215[shape = record, label = "1 1\n(-4)"]
+    node_204 -- node_218
+    node_218 -- node_219
+    node_219 -- node_220
+    node_220[shape = record, label = "1\n(5)"]
+    node_219 -- node_221
+    node_221[shape = record, label = "1\n(5)"]
+    node_219[shape = ellipse, label = "1 1\n(5)"]
+    node_218 -- node_222
+    node_222[shape = ellipse, label = "1\n(-4)"]
+    node_218 -- node_223
+    node_223 -- node_224
+    node_224[shape = record, label = "1\n(5)"]
+    node_223[shape = ellipse, label = "2\n(5)"]
+    node_218[shape = record, label = "2 1\n(-4)"]
+    node_204 -- node_225
+    node_225 -- node_226
+    node_226 -- node_227
+    node_227[shape = record, label = "1\n(5)"]
+    node_226 -- node_228
+    node_228[shape = record, label = "1\n(5)"]
+    node_226[shape = ellipse, label = "1 1\n(5)"]
+    node_225 -- node_229
+    node_229[shape = ellipse, label = "1\n(-4)"]
+    node_225 -- node_230
+    node_230 -- node_231
+    node_231[shape = record, label = "1\n(5)"]
+    node_230[shape = ellipse, label = "2\n(5)"]
+    node_225[shape = record, label = "2 1\n(-4)"]
+    node_204[shape = ellipse, label = "2 1 1\n(5)"]
+    node_168 -- node_232
+    node_232 -- node_233
+    node_233 -- node_234
+    node_234[shape = ellipse, label = "1\n(-4)"]
+    node_233 -- node_235
+    node_235[shape = ellipse, label = "1\n(-4)"]
+    node_233[shape = record, label = "1 1\n(-4)"]
+    node_232 -- node_236
+    node_236[shape = record, label = "1\n(3)"]
+    node_232 -- node_237
+    node_237 -- node_238
+    node_238[shape = ellipse, label = "1\n(-4)"]
+    node_237[shape = record, label = "2\n(-4)"]
+    node_232[shape = ellipse, label = "2 1\n(3)"]
+    node_168 -- node_239
+    node_239 -- node_240
+    node_240 -- node_241
+    node_241 -- node_242
+    node_242[shape = record, label = "1\n(5)"]
+    node_241[shape = ellipse, label = "2\n(5)"]
+    node_240 -- node_243
+    node_243 -- node_244
+    node_244[shape = record, label = "1\n(5)"]
+    node_243 -- node_245
+    node_245[shape = record, label = "1\n(5)"]
+    node_243[shape = ellipse, label = "1 1\n(5)"]
+    node_240 -- node_246
+    node_246[shape = ellipse, label = "1\n(-4)"]
+    node_240[shape = record, label = "1 2\n(-4)"]
+    node_239 -- node_247
+    node_247 -- node_248
+    node_248[shape = ellipse, label = "1\n(-4)"]
+    node_247[shape = record, label = "2\n(-4)"]
+    node_239 -- node_249
+    node_249 -- node_250
+    node_250 -- node_251
+    node_251[shape = record, label = "1\n(5)"]
+    node_250 -- node_252
+    node_252[shape = record, label = "1\n(5)"]
+    node_250[shape = ellipse, label = "1 1\n(5)"]
+    node_249 -- node_253
+    node_253[shape = ellipse, label = "1\n(-4)"]
+    node_249 -- node_254
+    node_254 -- node_255
+    node_255[shape = record, label = "1\n(5)"]
+    node_254[shape = ellipse, label = "2\n(5)"]
+    node_249[shape = record, label = "2 1\n(-4)"]
+    node_239 -- node_256
+    node_256 -- node_257
+    node_257[shape = ellipse, label = "1\n(-4)"]
+    node_256[shape = record, label = "2\n(-4)"]
+    node_239[shape = ellipse, label = "2 2\n(-4)"]
+    node_168[shape = record, label = "2 2 1\n(-4)"]
+    node_139 -- node_258
+    node_258 -- node_259
+    node_259 -- node_260
+    node_260[shape = record, label = "1\n(3)"]
+    node_259 -- node_261
+    node_261[shape = record, label = "1\n(3)"]
+    node_259[shape = ellipse, label = "1 1\n(3)"]
+    node_258 -- node_262
+    node_262[shape = ellipse, label = "1\n(-2)"]
+    node_258 -- node_263
+    node_263 -- node_264
+    node_264[shape = record, label = "1\n(3)"]
+    node_263[shape = ellipse, label = "2\n(3)"]
+    node_258[shape = record, label = "2 1\n(-2)"]
+    node_139 -- node_265
+    node_265 -- node_266
+    node_266 -- node_267
+    node_267 -- node_268
+    node_268[shape = ellipse, label = "1\n(-4)"]
+    node_267 -- node_269
+    node_269[shape = ellipse, label = "1\n(-4)"]
+    node_267[shape = record, label = "1 1\n(-4)"]
+    node_266 -- node_270
+    node_270 -- node_271
+    node_271[shape = ellipse, label = "1\n(-4)"]
+    node_270 -- node_272
+    node_272[shape = ellipse, label = "1\n(-4)"]
+    node_270[shape = record, label = "1 1\n(-4)"]
+    node_266 -- node_273
+    node_273 -- node_274
+    node_274[shape = ellipse, label = "1\n(-4)"]
+    node_273 -- node_275
+    node_275[shape = ellipse, label = "1\n(-4)"]
+    node_273[shape = record, label = "1 1\n(-4)"]
+    node_266[shape = ellipse, label = "1 1 1\n(-4)"]
+    node_265 -- node_276
+    node_276 -- node_277
+    node_277 -- node_278
+    node_278 -- node_279
+    node_279[shape = record, label = "1\n(5)"]
+    node_278 -- node_280
+    node_280[shape = record, label = "1\n(5)"]
+    node_278[shape = ellipse, label = "1 1\n(5)"]
+    node_277 -- node_281
+    node_281 -- node_282
+    node_282[shape = record, label = "1\n(5)"]
+    node_281 -- node_283
+    node_283[shape = record, label = "1\n(5)"]
+    node_281[shape = ellipse, label = "1 1\n(5)"]
+    node_277 -- node_284
+    node_284 -- node_285
+    node_285[shape = record, label = "1\n(5)"]
+    node_284 -- node_286
+    node_286[shape = record, label = "1\n(5)"]
+    node_284[shape = ellipse, label = "1 1\n(5)"]
+    node_277[shape = record, label = "1 1 1\n(5)"]
+    node_276 -- node_287
+    node_287 -- node_288
+    node_288[shape = ellipse, label = "1\n(-4)"]
+    node_287 -- node_289
+    node_289[shape = ellipse, label = "1\n(-4)"]
+    node_287[shape = record, label = "1 1\n(-4)"]
+    node_276 -- node_290
+    node_290 -- node_291
+    node_291 -- node_292
+    node_292[shape = record, label = "1\n(5)"]
+    node_291 -- node_293
+    node_293[shape = record, label = "1\n(5)"]
+    node_291[shape = ellipse, label = "1 1\n(5)"]
+    node_290 -- node_294
+    node_294[shape = ellipse, label = "1\n(-4)"]
+    node_290 -- node_295
+    node_295 -- node_296
+    node_296[shape = record, label = "1\n(5)"]
+    node_295[shape = ellipse, label = "2\n(5)"]
+    node_290[shape = record, label = "2 1\n(-4)"]
+    node_276 -- node_297
+    node_297 -- node_298
+    node_298 -- node_299
+    node_299[shape = record, label = "1\n(5)"]
+    node_298 -- node_300
+    node_300[shape = record, label = "1\n(5)"]
+    node_298[shape = ellipse, label = "1 1\n(5)"]
+    node_297 -- node_301
+    node_301[shape = ellipse, label = "1\n(-4)"]
+    node_297 -- node_302
+    node_302 -- node_303
+    node_303[shape = record, label = "1\n(5)"]
+    node_302[shape = ellipse, label = "2\n(5)"]
+    node_297[shape = record, label = "2 1\n(-4)"]
+    node_276[shape = ellipse, label = "2 1 1\n(5)"]
+    node_265 -- node_304
+    node_304 -- node_305
+    node_305[shape = record, label = "1\n(3)"]
+    node_304 -- node_306
+    node_306[shape = record, label = "1\n(3)"]
+    node_304[shape = ellipse, label = "1 1\n(3)"]
+    node_265 -- node_307
+    node_307 -- node_308
+    node_308 -- node_309
+    node_309[shape = ellipse, label = "1\n(-4)"]
+    node_308 -- node_310
+    node_310[shape = ellipse, label = "1\n(-4)"]
+    node_308[shape = record, label = "1 1\n(-4)"]
+    node_307 -- node_311
+    node_311 -- node_312
+    node_312 -- node_313
+    node_313[shape = record, label = "1\n(5)"]
+    node_312 -- node_314
+    node_314[shape = record, label = "1\n(5)"]
+    node_312[shape = ellipse, label = "1 1\n(5)"]
+    node_311 -- node_315
+    node_315[shape = ellipse, label = "1\n(-4)"]
+    node_311 -- node_316
+    node_316 -- node_317
+    node_317[shape = record, label = "1\n(5)"]
+    node_316[shape = ellipse, label = "2\n(5)"]
+    node_311[shape = record, label = "2 1\n(-4)"]
+    node_307 -- node_318
+    node_318[shape = record, label = "1\n(3)"]
+    node_307 -- node_319
+    node_319 -- node_320
+    node_320[shape = ellipse, label = "1\n(-4)"]
+    node_319 -- node_321
+    node_321 -- node_322
+    node_322[shape = record, label = "1\n(5)"]
+    node_321[shape = ellipse, label = "2\n(5)"]
+    node_319[shape = record, label = "3\n(-4)"]
+    node_307[shape = ellipse, label = "3 1\n(3)"]
+    node_265 -- node_323
+    node_323 -- node_324
+    node_324 -- node_325
+    node_325[shape = ellipse, label = "1\n(-4)"]
+    node_324 -- node_326
+    node_326[shape = ellipse, label = "1\n(-4)"]
+    node_324[shape = record, label = "1 1\n(-4)"]
+    node_323 -- node_327
+    node_327 -- node_328
+    node_328 -- node_329
+    node_329[shape = record, label = "1\n(5)"]
+    node_328 -- node_330
+    node_330[shape = record, label = "1\n(5)"]
+    node_328[shape = ellipse, label = "1 1\n(5)"]
+    node_327 -- node_331
+    node_331[shape = ellipse, label = "1\n(-4)"]
+    node_327 -- node_332
+    node_332 -- node_333
+    node_333[shape = record, label = "1\n(5)"]
+    node_332[shape = ellipse, label = "2\n(5)"]
+    node_327[shape = record, label = "2 1\n(-4)"]
+    node_323 -- node_334
+    node_334[shape = record, label = "1\n(3)"]
+    node_323 -- node_335
+    node_335 -- node_336
+    node_336[shape = ellipse, label = "1\n(-4)"]
+    node_335 -- node_337
+    node_337 -- node_338
+    node_338[shape = record, label = "1\n(5)"]
+    node_337[shape = ellipse, label = "2\n(5)"]
+    node_335[shape = record, label = "3\n(-4)"]
+    node_323[shape = ellipse, label = "3 1\n(3)"]
+    node_265[shape = record, label = "3 1 1\n(-4)"]
+    node_139 -- node_339
+    node_339 -- node_340
+    node_340 -- node_341
+    node_341[shape = record, label = "1\n(3)"]
+    node_340 -- node_342
+    node_342[shape = record, label = "1\n(3)"]
+    node_340[shape = ellipse, label = "1 1\n(3)"]
+    node_339 -- node_343
+    node_343 -- node_344
+    node_344 -- node_345
+    node_345[shape = ellipse, label = "1\n(-4)"]
+    node_344 -- node_346
+    node_346[shape = ellipse, label = "1\n(-4)"]
+    node_344[shape = record, label = "1 1\n(-4)"]
+    node_343 -- node_347
+    node_347[shape = record, label = "1\n(3)"]
+    node_343 -- node_348
+    node_348 -- node_349
+    node_349[shape = ellipse, label = "1\n(-4)"]
+    node_348[shape = record, label = "2\n(-4)"]
+    node_343[shape = ellipse, label = "2 1\n(3)"]
+    node_339 -- node_350
+    node_350[shape = ellipse, label = "1\n(-2)"]
+    node_339 -- node_351
+    node_351 -- node_352
+    node_352[shape = record, label = "1\n(3)"]
+    node_351 -- node_353
+    node_353 -- node_354
+    node_354[shape = ellipse, label = "1\n(-4)"]
+    node_353[shape = record, label = "2\n(-4)"]
+    node_351[shape = ellipse, label = "3\n(3)"]
+    node_339[shape = record, label = "3 1\n(-2)"]
+    node_139 -- node_355
+    node_355 -- node_356
+    node_356 -- node_357
+    node_357 -- node_358
+    node_358[shape = ellipse, label = "1\n(-4)"]
+    node_357[shape = record, label = "2\n(-4)"]
+    node_356 -- node_359
+    node_359 -- node_360
+    node_360[shape = ellipse, label = "1\n(-4)"]
+    node_359 -- node_361
+    node_361[shape = ellipse, label = "1\n(-4)"]
+    node_359[shape = record, label = "1 1\n(-4)"]
+    node_356 -- node_362
+    node_362[shape = record, label = "1\n(3)"]
+    node_356[shape = ellipse, label = "1 2\n(3)"]
+    node_355 -- node_363
+    node_363 -- node_364
+    node_364 -- node_365
+    node_365 -- node_366
+    node_366[shape = record, label = "1\n(5)"]
+    node_365[shape = ellipse, label = "2\n(5)"]
+    node_364 -- node_367
+    node_367 -- node_368
+    node_368[shape = record, label = "1\n(5)"]
+    node_367 -- node_369
+    node_369[shape = record, label = "1\n(5)"]
+    node_367[shape = ellipse, label = "1 1\n(5)"]
+    node_364 -- node_370
+    node_370[shape = ellipse, label = "1\n(-4)"]
+    node_364[shape = record, label = "1 2\n(-4)"]
+    node_363 -- node_371
+    node_371 -- node_372
+    node_372[shape = ellipse, label = "1\n(-4)"]
+    node_371[shape = record, label = "2\n(-4)"]
+    node_363 -- node_373
+    node_373 -- node_374
+    node_374 -- node_375
+    node_375[shape = record, label = "1\n(5)"]
+    node_374 -- node_376
+    node_376[shape = record, label = "1\n(5)"]
+    node_374[shape = ellipse, label = "1 1\n(5)"]
+    node_373 -- node_377
+    node_377[shape = ellipse, label = "1\n(-4)"]
+    node_373 -- node_378
+    node_378 -- node_379
+    node_379[shape = record, label = "1\n(5)"]
+    node_378[shape = ellipse, label = "2\n(5)"]
+    node_373[shape = record, label = "2 1\n(-4)"]
+    node_363 -- node_380
+    node_380 -- node_381
+    node_381[shape = ellipse, label = "1\n(-4)"]
+    node_380[shape = record, label = "2\n(-4)"]
+    node_363[shape = ellipse, label = "2 2\n(-4)"]
+    node_355 -- node_382
+    node_382 -- node_383
+    node_383[shape = record, label = "1\n(3)"]
+    node_382[shape = ellipse, label = "2\n(3)"]
+    node_355 -- node_384
+    node_384 -- node_385
+    node_385 -- node_386
+    node_386[shape = ellipse, label = "1\n(-4)"]
+    node_385 -- node_387
+    node_387[shape = ellipse, label = "1\n(-4)"]
+    node_385[shape = record, label = "1 1\n(-4)"]
+    node_384 -- node_388
+    node_388 -- node_389
+    node_389 -- node_390
+    node_390[shape = record, label = "1\n(5)"]
+    node_389 -- node_391
+    node_391[shape = record, label = "1\n(5)"]
+    node_389[shape = ellipse, label = "1 1\n(5)"]
+    node_388 -- node_392
+    node_392[shape = ellipse, label = "1\n(-4)"]
+    node_388 -- node_393
+    node_393 -- node_394
+    node_394[shape = record, label = "1\n(5)"]
+    node_393[shape = ellipse, label = "2\n(5)"]
+    node_388[shape = record, label = "2 1\n(-4)"]
+    node_384 -- node_395
+    node_395[shape = record, label = "1\n(3)"]
+    node_384 -- node_396
+    node_396 -- node_397
+    node_397[shape = ellipse, label = "1\n(-4)"]
+    node_396 -- node_398
+    node_398 -- node_399
+    node_399[shape = record, label = "1\n(5)"]
+    node_398[shape = ellipse, label = "2\n(5)"]
+    node_396[shape = record, label = "3\n(-4)"]
+    node_384[shape = ellipse, label = "3 1\n(3)"]
+    node_355 -- node_400
+    node_400 -- node_401
+    node_401[shape = record, label = "1\n(3)"]
+    node_400 -- node_402
+    node_402 -- node_403
+    node_403[shape = ellipse, label = "1\n(-4)"]
+    node_402[shape = record, label = "2\n(-4)"]
+    node_400[shape = ellipse, label = "3\n(3)"]
+    node_355[shape = record, label = "3 2\n(-4)"]
+    node_139[shape = ellipse, label = "3 2 1\n(-2)"]
+}
