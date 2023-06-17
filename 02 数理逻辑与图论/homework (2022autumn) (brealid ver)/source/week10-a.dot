@@ -1,0 +1,33 @@
+graph action {
+    node_1 -- node_2
+    node_2 -- node_3
+    node_3[shape = ellipse, label = "1\n(-2)"]
+    node_2 -- node_4
+    node_4[shape = ellipse, label = "1\n(-2)"]
+    node_2[shape = record, label = "1 1\n(-2)"]
+    node_1 -- node_5
+    node_5 -- node_6
+    node_6 -- node_7
+    node_7[shape = record, label = "1\n(3)"]
+    node_6 -- node_8
+    node_8[shape = record, label = "1\n(3)"]
+    node_6[shape = ellipse, label = "1 1\n(3)"]
+    node_5 -- node_9
+    node_9[shape = ellipse, label = "1\n(-2)"]
+    node_5 -- node_10
+    node_10 -- node_11
+    node_11[shape = record, label = "1\n(3)"]
+    node_10[shape = ellipse, label = "2\n(3)"]
+    node_5[shape = record, label = "2 1\n(-2)"]
+    node_1 -- node_12
+    node_12[shape = record, label = "1\n(1)"]
+    node_1 -- node_13
+    node_13 -- node_14
+    node_14[shape = ellipse, label = "1\n(-2)"]
+    node_13 -- node_15
+    node_15 -- node_16
+    node_16[shape = record, label = "1\n(3)"]
+    node_15[shape = ellipse, label = "2\n(3)"]
+    node_13[shape = record, label = "3\n(-2)"]
+    node_1[shape = ellipse, label = "3 1\n(1)"]
+}
